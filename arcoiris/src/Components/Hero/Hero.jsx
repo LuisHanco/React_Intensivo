@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import dark_arrow from '../../assets/dark-arrow.png'
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <div className="hero-text">
         <h1>Listo Para Tu Futuro</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, perferendis reprehenderit! Ratione nemo quo facere iusto. Odit nisi optio porro reiciendis libero, quas dolore dolorem, unde, similique earum ipsa nulla!</p>
-        <button className='btn'>Explora Mas...</button>
+        <button className='btn'>Explora Mas... <img src={dark_arrow} alt="" /></button>
       </div>
     </div>
   )
