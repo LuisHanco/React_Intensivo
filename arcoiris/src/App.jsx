@@ -10,6 +10,7 @@ import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import { useState } from 'react'
+import Redes from './Components/Redes/Redes'
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const [playState, setPlayState] = useState(false);
 
   return (
     <div>
+      <Redes/>
       <Navbar/>
       <Hero/>
       <div className="container">
@@ -31,6 +33,7 @@ const [playState, setPlayState] = useState(false);
         <Title subTitle='Contactanos' title='Estamos muy cerca de ti' />
         <Contact/>
         <Footer/>
+        
       </div>
 
       <VideoPlayer playState={playState} setPlayState={setPlayState}/>

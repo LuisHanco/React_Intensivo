@@ -5,6 +5,8 @@ import menu_icon from '../../assets/menu-icon.png'
 
 import {Link, Element} from 'react-scroll'
 
+import { IoIosArrowDown } from "react-icons/io";
+
 const Navbar = () => {
 
   const [sticky, setSticky] = useState(false);
@@ -29,13 +31,15 @@ const Navbar = () => {
 
   return (
     <nav className= {`container ${sticky? 'dark-nav' : ''}`}>
-      <img src={logo} alt="" className='logo'/>
+      <img src={logo} alt="" className='logo collegue'/>
       <ul className={mobileMenu? '':'hide-mobile-menu'}>
-        <li><Link to='hero' smooth={true} offset={0} duration={500}>Incio</Link></li>
-        <li><Link to='programs' smooth={true} offset={-260} duration={500}>Programas</Link></li>
-        <li><Link to='about' smooth={true} offset={-150} duration={500}>Sobre</Link></li>
-        <li><Link to='testimonials' smooth={true} offset={-260} duration={500}>Testimoniales</Link></li>
-        <li><Link to='contact' smooth={true} offset={-260} duration={500} className='btn'>Contact</Link></li>
+        <li><a href=""><Link to='hero' smooth={true} offset={0} duration={500}>Incio</Link></a></li>
+        <li><a href=""><IoIosArrowDown /><Link to='about' smooth={true} offset={-150} duration={500}>Nosotros</Link></a></li>
+        <li><a href=""><IoIosArrowDown /><Link to='programs' smooth={true} offset={-260} duration={500}>Niveles</Link></a></li>
+        <li><a href=""><Link to='programs' smooth={true} offset={-260} duration={500}>Matriculas</Link></a></li>
+        <li><a href=""><IoIosArrowDown /><Link to='programs' smooth={true} offset={-260} duration={500}>Servicios</Link></a></li>
+        <li><a href=""><Link to='testimonials' smooth={true} offset={-260} duration={500}>Testimoniales</Link></a></li>
+        <li><a href=""><Link to='contact' smooth={true} offset={-260} duration={500} className='btn-1'>Contacto</Link></a></li>
       </ul>
       <img src={menu_icon} alt=""  className='menu-icon' onClick={toggleMenu}/>
     </nav>
