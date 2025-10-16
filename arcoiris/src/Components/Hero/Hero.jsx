@@ -2,13 +2,20 @@ import React from 'react'
 import './Hero.css'
 import dark_arrow from '../../assets/dark-arrow.png'
 
+import { IoIosArrowRoundForward } from "react-icons/io";
+
+
+import { FaLongArrowAltRight } from "react-icons/fa";
+
+import { MdOutlineReadMore } from "react-icons/md";
+
 const Hero = () => {
   return (
     <div className='hero container'>
       <div className="hero-text">
-        <h1>I.E.P. ARCO IRIS</h1>
-        <p>"Formando personas con valores competentes, críticas y creativas."</p>
-        <button className='btn'>Explora Mas... <img src={dark_arrow} alt="" /></button>
+        <h1>Educacion de Calidad <br /> para un Futuro Brillante</h1>
+        <p>Formando lideres con valores y pensamientos educativos </p>
+        <button className='btn'><span className='btn_1'>Explora Mas</span> <span className='btn_2'><MdOutlineReadMore /></span></button>
       </div>
       
       {/* --- FORMULARIO DE PRE-MATRÍCULA AGREGADO --- */}

@@ -1,4 +1,4 @@
-/* ... (estilos existentes) ... */
+
 .hero{
     width: 100%;
     min-height: 100vh;
@@ -7,33 +7,72 @@
     background-position: center;
     color: #fff;
     display: flex;
-    /* --- CAMBIO AQUÍ para alinear elementos --- */
     align-items: center; 
     justify-content: center;
-    /* ------------------------------------------ */
-    gap: 400px; /* Espacio entre el texto y el formulario */
-    padding: 20px; /* Asegura un padding en el contenedor principal */
+    gap: 400px; 
+    padding: 20px; 
 }
 
-/* Reducción del tamaño máximo para que ambos quepan */
+
 .hero-text{
     text-align: center;
-    max-width: 500px; /* Reducido de 800px */
+    max-width: 500px; 
 }
 
-/* --- NUEVOS ESTILOS PARA EL FORMULARIO --- */
+.hero-text h1{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 45px;
+}
+
+.hero-text p{
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-text .btn{
+    background-color: rgb(245, 170, 9);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.hero-text .btn .btn_2{
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.hero-text .btn .btn_1{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+/* --- PARA EL FORMULARIO --- */
 .pre-matricula-form {
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 100%;
-    color: #000; /* Color de texto negro */
+    color: #000; 
 }
 
 .pre-matricula-form h2 {
-    color: #08003A; /* Un color institucional para el título */
+    color: #08003A; 
     margin-bottom: 25px;
     font-size: 22px;
     text-align: center;
@@ -54,12 +93,12 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Importante para el padding */
+    box-sizing: border-box; 
     font-size: 16px;
 }
 
 .form-btn {
-    background: #08003A; /* Color de botón diferente/institucional */
+    background: #08003A; 
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -70,27 +109,24 @@
 }
 
 .form-btn:hover {
-    background: #0000FF; /* Un color de hover */
+    background: #0000FF; 
 }
-/* ------------------------------------------ */
-
-/* ... (estilos existentes para hero-text h1, p, etc.) ... */
 
 
 /* ------- media query ------- */
 
 
-@media (max-width: 1050px) { /* Nuevo punto de quiebre para apilar */
+@media (max-width: 1050px) { 
     .hero {
-        flex-direction: column; /* Apila los elementos verticalmente */
+        flex-direction: column; 
         text-align: center;
         gap: 40px;
-        height: 100vh; /* Permite que la altura se ajuste al contenido */
+        height: 100vh; 
         padding: 60px 20px;
     }
     
     .hero-text, .pre-matricula-form {
-        max-width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+        max-width: 90%; 
     }
 }
 
@@ -98,7 +134,6 @@
     .hero-text h1{
         font-size: 40px;
     }
-    /* Resto de estilos para 850px */
 }
 
 @media (max-width: 650px){
@@ -111,5 +146,5 @@
         font-size: 14px;
         margin: 15px auto 30px;
     }
-    /* Resto de estilos para 650px */
+    
 }
