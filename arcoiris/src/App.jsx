@@ -23,7 +23,7 @@ const [playState, setPlayState] = useState(false);
       <Navbar/>
       <Hero/>
       <div className="container">
-        <Title subTitle='Nuestros Programas' title='What We Offer' />
+        <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
         <Programs/>
         <About setPlayState={setPlayState}/>
         <Title subTitle='Galeria' title='Fotos del Colegio' />
