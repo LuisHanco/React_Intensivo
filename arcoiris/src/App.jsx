@@ -28,14 +28,12 @@ const [playState, setPlayState] = useState(false);
         <About setPlayState={setPlayState}/>
         <Title subTitle='Galeria' title='Fotos del Colegio' />
         <Campus/>
-        <Title subTitle='Testimonios' title='Que dice el Estudiante' />
-        <Testimonials/>
+        {/* <Title subTitle='Testimonios' title='Que dice el Estudiante' />
+        <Testimonials/> */}
         <Title subTitle='Contactanos' title='Estamos muy cerca de ti' />
         <Contact/>
-        <Footer/>
-        
       </div>
-
+      <Footer/>
       <VideoPlayer playState={playState} setPlayState={setPlayState}/>
     </div>
   )
