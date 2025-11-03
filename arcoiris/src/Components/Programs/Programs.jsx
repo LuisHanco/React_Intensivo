@@ -19,12 +19,12 @@ const Programs = () => {
         </div> */}
         <div className='program-title'>
           <h2>Inicial</h2>
-          <ul>
+          {/* <ul>
             <li>Educacion de Calidad</li>
             <li>Aulas Innovadoras</li>
             <li>Presencial</li>
             <li>3 - 5 años</li>
-          </ul>
+          </ul> */}
           <button>Mas Informacion</button>
         </div>
       </div>
@@ -37,6 +37,7 @@ const Programs = () => {
 
         <div className='program-title'>
           <h2>Primaria</h2>
+          <button>Mas Informacion</button>
         </div>
       </div>
 
@@ -49,6 +50,7 @@ const Programs = () => {
 
         <div className='program-title'>
           <h2>Secundaria</h2>
+          <button>Mas Informacion</button>
         </div>
       </div>
 

@@ -79,6 +79,7 @@ nav ul li a{
 @media (max-width: 1000px){
     .logo{
         width: 140px;
+        margin-left: -200px;
     }
     nav ul li{
         margin: 10px 15px;
@@ -125,7 +126,10 @@ nav ul li a{
     transform: translateY(-50px);
   }
 
-
+    .dark-nav .collegue{
+    margin-left: 0px;
+    width: 120px;
+  }
 
     .menu-icon{
         display: block;

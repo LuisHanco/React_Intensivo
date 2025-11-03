@@ -133,11 +133,17 @@
     .hero-text, .pre-matricula-form {
         max-width: 90%; 
     }
+
+    .btn{
+        margin: auto;
+    }
 }
 
 @media (max-width: 850px){
     .hero-text h1{
         font-size: 40px;
+        margin-top: 150px;
+        text-align: center;
     }
 }
 
@@ -145,7 +151,6 @@
     .hero-text h1{
         font-size: 30px;
         max-width: 400px;
-        margin: auto;
     }
     .hero-text p{
         font-size: 14px;
