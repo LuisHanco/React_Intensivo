@@ -11,6 +11,7 @@ import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import { useState } from 'react'
 import Redes from './Components/Redes/Redes'
+import Hero_2 from './Components/Hero_2/Hero_2'
 
 const App = () => {
 
@@ -21,7 +22,7 @@ const [playState, setPlayState] = useState(false);
     <div>
       <Redes/>
       <Navbar/>
-      <Hero/>
+      <Hero_2/>
       <div className="container">
         <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
         <Programs/>
