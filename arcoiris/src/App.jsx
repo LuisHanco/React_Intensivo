@@ -22,7 +22,7 @@ const [playState, setPlayState] = useState(false);
     <div>
       <Redes/>
       <Navbar/>
-      <Hero_2/>
+      <Hero/>
       <div className="container">
         <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
         <Programs/>

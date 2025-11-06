@@ -9,12 +9,21 @@ import { MdOutlineReadMore } from "react-icons/md";
 const Hero = () => {
   return (
     <div className='hero container'>
+      
       <div className="hero-text">
         <p>Colegio Arco Iris</p>
         <h1><span className='hero-text-uno'>Educacion de Calidad</span> <br /> <span className='hero-text-dos'>Para un Futuro Brillante</span></h1>
         <p>Formando lideres con valores y pensamientos educativos </p>
         <button className='btn'><span className='btn_1'>Explora Mas</span> <span className='btn_2'><MdOutlineReadMore /></span></button>
       </div>
+
+       {/* <div className="content-hero">
+            <h1>Web Design & <br /> <span>Developer</span> <br />Course</h1>
+            <p className='par'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet <br />odit mollitia eius quae dolorum tenetur assumenda praes
+            entium veritatis aspernatur earum,<br /> quos rem sint vitae! Laborum iusto dolores exercitationem saepe odit!</p>
+
+            <button className='cn'><a href="">ENTRAR</a></button>
+        </div> */}
       
       {/* --- FORMULARIO DE PRE-MATRÍCULA AGREGADO --- */}
       <div className="pre-matricula-form">

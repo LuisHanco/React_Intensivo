@@ -3,7 +3,7 @@ import './Hero_2.css'
 
 const Hero_2 = () => {
   return (
-    <div className='main'>
+    <div className='main_hero'>
 
         {/* <div className="navbar_hero">
             <div className="icon">
@@ -33,7 +33,7 @@ const Hero_2 = () => {
 
 
 
- <div className="content-hero">
+        <div className="content-hero">
             <h1>Web Design & <br /> <span>Developer</span> <br />Course</h1>
             <p className='par'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet <br />odit mollitia eius quae dolorum tenetur assumenda praes
             entium veritatis aspernatur earum,<br /> quos rem sint vitae! Laborum iusto dolores exercitationem saepe odit!</p>
@@ -49,7 +49,7 @@ const Hero_2 = () => {
                 <p className="link">No tienes cuenta <br />
                 <a href="">Entrar </a> Aqui</p>
                 <p className="liw">Entrar Con</p>
-            </div>
+        </div>
     </div>
   )
 }
