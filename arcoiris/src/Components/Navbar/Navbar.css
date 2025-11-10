@@ -78,8 +78,9 @@ nav ul li a{
 
 @media (max-width: 1000px){
     .logo{
-        width: 140px;
-        margin-left: -200px;
+        width: 100px;
+        padding-top: 15px;
+        /* margin-left: -200px; */
     }
     nav ul li{
         margin: 10px 15px;
@@ -135,6 +136,7 @@ nav ul li a{
         display: block;
         width: 30px;
         cursor: pointer;
+        padding-top: 15px;
     }
 
     .hide-mobile-menu{

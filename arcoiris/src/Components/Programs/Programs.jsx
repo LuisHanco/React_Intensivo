@@ -7,6 +7,13 @@ import program_icon_1 from '../../assets/program-icon-1.png'
 import program_icon_2 from '../../assets/program-icon-2.png'
 import program_icon_3 from '../../assets/program-icon-3.png'
 
+import { FaMedal } from "react-icons/fa6";
+import { SiGoogleclassroom } from "react-icons/si";
+import { PiChairFill } from "react-icons/pi";
+import { FaChildReaching } from "react-icons/fa6";
+import { FaAngleDoubleRight } from "react-icons/fa";
+
+
 const Programs = () => {
   return (
     <div className='programs'>
@@ -18,14 +25,15 @@ const Programs = () => {
             <p>Inicial</p>
         </div> */}
         <div className='program-title'>
-          <h2>Inicial</h2>
-          {/* <ul>
-            <li>Educacion de Calidad</li>
-            <li>Aulas Innovadoras</li>
-            <li>Presencial</li>
-            <li>3 - 5 años</li>
-          </ul> */}
-          <button>Mas Informacion</button>
+          <h2>Nivel Inicial</h2>
+          <ul className='items-program'>
+            <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
+            <li><SiGoogleclassroom  className='icon_program'/> Aulas Innovadoras</li>
+            <li><PiChairFill  className='icon_program'/>Presencial</li>
+            <li><FaChildReaching className='icon_program' />3 - 5 años</li>
+          </ul>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
+         
         </div>
       </div>
       <div className="program">
@@ -37,7 +45,13 @@ const Programs = () => {
 
         <div className='program-title'>
           <h2>Primaria</h2>
-          <button>Mas Informacion</button>
+          <ul className='items-program'>
+            <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
+            <li><SiGoogleclassroom  className='icon_program'/> Aulas Innovadoras</li>
+            <li><PiChairFill  className='icon_program'/>Presencial</li>
+            <li><FaChildReaching className='icon_program' />3 - 5 años</li>
+          </ul>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
         </div>
       </div>
 
@@ -50,7 +64,13 @@ const Programs = () => {
 
         <div className='program-title'>
           <h2>Secundaria</h2>
-          <button>Mas Informacion</button>
+          <ul className='items-program'>
+            <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
+            <li><SiGoogleclassroom  className='icon_program'/> Aulas Innovadoras</li>
+            <li><PiChairFill  className='icon_program'/>Presencial</li>
+            <li><FaChildReaching className='icon_program' />3 - 5 años</li>
+          </ul>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
         </div>
       </div>
 

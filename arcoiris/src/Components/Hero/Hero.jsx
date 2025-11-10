@@ -6,15 +6,45 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdOutlineReadMore } from "react-icons/md";
 
 
+
 const Hero = () => {
+
+
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "fdc835c7-abb8-48d3-80e7-9befc062665f");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
+
+    
     <div className='hero container'>
-      
       <div className="hero-text">
-        <p>Colegio Arco Iris</p>
+        <p className='note'>Colegio Arco Iris</p>
         <h1><span className='hero-text-uno'>Educacion de Calidad</span> <br /> <span className='hero-text-dos'>Para un Futuro Brillante</span></h1>
         <p>Formando lideres con valores y pensamientos educativos </p>
-        <button className='btn'><span className='btn_1'>Explora Mas</span> <span className='btn_2'><MdOutlineReadMore /></span></button>
+        <button className='btn'><span className='btn_1'>¡Conoce Mas!</span> <span className='btn_2'><MdOutlineReadMore /></span></button>
       </div>
 
        {/* <div className="content-hero">
@@ -27,14 +57,15 @@ const Hero = () => {
       
       {/* --- FORMULARIO DE PRE-MATRÍCULA AGREGADO --- */}
       <div className="pre-matricula-form">
-        <h2>Pre-Matrícula Inicial, Primaria y Secundaria</h2>
-        <form>
+        <h2>Pre-Matrícula 2026</h2>
+        <form  onSubmit={onSubmit} >
           <div className="form-group">
-            <label htmlFor="studentName">Nombre del Alumno/a:</label>
-            <input type="text" id="studentName" name="studentName" required />
+            <input type="text" placeholder='Nombre de Apoderado'  className='input_01'/>
+            {/* <label htmlFor="studentName">Nombre del Alumno/a:</label> */}
+            <input type="text" id="studentName" name="studentName" required placeholder='Nombre del Estudiante' className='input_01'/>
           </div>
           <div className="form-group">
-            <label htmlFor="level">Nivel de Interés:</label>
+            {/* <label htmlFor="level">Nivel de Interés:</label> */}
             <select id="level" name="level" required>
               <option value="">Selecciona un Nivel</option>
               <option value="inicial">Inicial</option>
@@ -43,11 +74,12 @@ const Hero = () => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="parentEmail">Celular del Padre/Madre:</label>
-            <input type="email" id="parentEmail" name="parentEmail" required />
+            {/* <label htmlFor="parentEmail">Celular del Padre/Madre:</label> */}
+            <input type="tel" id="parentEmail" name="parentEmail" placeholder='Celular del Apoderado' required />
           </div>
-          <button type="submit" className='btn form-btn'>Enviar Solicitud</button>
+          <button type="submit" className='btn_2 form-btn'>Enviar Solicitud</button>
         </form>
+        <span>{result}</span>
       </div>
       {/* ------------------------------------------ */}
       

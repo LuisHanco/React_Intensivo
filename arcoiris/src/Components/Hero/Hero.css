@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Outfit:wght@100..900&family=Stack+Sans+Notch:wght@200..700&display=swap');
 
 .hero{
     width: 100%;
@@ -16,10 +17,10 @@
 
 
 .hero-text{
+    /* background-color: #0000FF; */
     text-align: center;
     padding: 15px;
     min-width: 600px;
-    /* background-color: #0000FF; */
 }
 
 .hero-text h1{
@@ -29,14 +30,17 @@
 }
 
 .hero-text-uno{
-    font-family: "Momo Signature", cursive;
+    font-family: "Stack Sans Notch", sans-serif;
     /* background-color: red; */
     padding: 10px;
-    font-size: 40px;
+    font-size: 50px;
     width: 100%;
+    align-items: center;
 }
 
 .hero-text-dos{
+    font-family: "Stack Sans Notch", sans-serif;
+    color: rgb(245, 170, 9);
     position: relative;
     left: 100px;
     top: 15px;
@@ -45,8 +49,10 @@
 }
 
 .hero-text p{
+    font-family: sans-serif;
+    font-weight: bold;
     text-align: justify;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
@@ -86,20 +92,23 @@
 
 /* --- PARA EL FORMULARIO --- */
 .pre-matricula-form {
-    background: rgba(255, 255, 255, 0.9); 
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7));
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 100%;
-    color: #000; 
+    color: #fff;
 }
 
 .pre-matricula-form h2 {
-    color: #08003A; 
+    color: #fff; 
     margin-bottom: 25px;
     font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
+    font-family: "Stack Sans Notch", sans-serif;
 }
 
 .form-group {
@@ -121,8 +130,13 @@
     font-size: 16px;
 }
 
+.input_01{
+    margin-top: 20px;
+}
+
 .form-btn {
-    background: #08003A; 
+    background: rgb(245, 170, 9);
+
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -133,14 +147,21 @@
 }
 
 .form-btn:hover {
-    background: #0000FF; 
+    background: rgb(245, 170, 9);
+}
+
+
+.btn_2{
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 
 /* ------- media query ------- */
 
 
-@media (max-width: 1050px) { 
+@media (max-width: 900px) { 
     .hero {
         flex-direction: column; 
         text-align: center;
@@ -148,13 +169,62 @@
         height: 100vh; 
         padding: 60px 20px;
     }
+
+.hero-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.note{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 160px;
+}
+
+
+    
+.hero-text-uno{
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: 40px;
+}
+
+.hero-text-dos{
+    font-family: "Stack Sans Notch", sans-serif;
+    color: rgb(245, 170, 9);
+    text-align: center;
+    position: relative;
+    left: 0px;
+    top: 15px;
+    
+}
+
+.hero-text p{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
     
     .hero-text, .pre-matricula-form {
         max-width: 90%; 
     }
 
     .btn{
-        margin: auto;
+        position: relative;
+        top: -60px;
+    }
+
+    .pre-matricula-form{
+        /* margin-top: -200px; */
+        position: relative;
+        top: -90px;
     }
 }
 

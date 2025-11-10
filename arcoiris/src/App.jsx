@@ -11,7 +11,6 @@ import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import { useState } from 'react'
 import Redes from './Components/Redes/Redes'
-import Hero_2 from './Components/Hero_2/Hero_2'
 
 const App = () => {
 

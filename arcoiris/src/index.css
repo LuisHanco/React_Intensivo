@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Outfit:wght@100..900&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +9,11 @@
 }
 
 body{
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
+  background: url(assets/body-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a{

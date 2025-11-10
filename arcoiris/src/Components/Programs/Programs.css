@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     
+    
 }
 .program{
     flex-basis: 31%;
@@ -21,32 +22,39 @@
     display: block;
 }
 
+.program .icon_program{
+    margin-right: 10px;
+}
+
 
 
 .program-title{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
     text-transform: uppercase;
     margin: 30px 0;
     color: darkcyan;
 }
 
+.items-program{
+    margin: 20px;
+}
 
 
 .program-title ul li{
     list-style: none;
-    text-align: justify;
-    margin: 5px;
+    text-align: left;
+    margin: 10px;
 }
 
 
 .program-title button{
-    width: 50%;
+    width: 35%;
     height: 35px;
     border-radius: 50px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: none;
     background-color: darkcyan;
     color: white;
@@ -81,6 +89,23 @@
     padding-top: 0;
 }
 
+.btn_program{
+    
+    margin-left: 120px;
+
+}
+
+.btn_box{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_program2{
+    font-size: 30px;
+    position: relative;
+    left: 80px;
+}
 /* ------- media query ------- */
 
 
