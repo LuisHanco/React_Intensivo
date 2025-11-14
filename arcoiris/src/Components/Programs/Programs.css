@@ -38,6 +38,34 @@
     color: darkcyan;
 }
 
+
+
+.title_uno{
+    color:#d19112 ;
+}
+
+
+.title_dos{
+    
+}
+
+.title_tres{
+    color: #694a91;
+}
+
+.btn_uno{
+    background-color: #d19112;
+}
+
+.btn_dos{
+    background-color: darkcyan;
+}
+
+.btn_tres{
+    background-color: #694a91;
+}
+
+
 .items-program{
     margin: 20px;
 }
@@ -56,7 +84,7 @@
     border-radius: 50px;
     /* margin-top: 10px; */
     border: none;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
     color: white;
 }
 

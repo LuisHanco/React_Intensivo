@@ -24,7 +24,7 @@ const Programs = () => {
             <img src={program_icon_1} alt="" />
             <p>Inicial</p>
         </div> */}
-        <div className='program-title'>
+        <div className='program-title title_uno'>
           <h2>Nivel Inicial</h2>
           <ul className='items-program'>
             <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
@@ -32,7 +32,7 @@ const Programs = () => {
             <li><PiChairFill  className='icon_program'/>Presencial</li>
             <li><FaChildReaching className='icon_program' />3 - 5 años</li>
           </ul>
-          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program btn_uno'>Mas Informacion</button></div>
          
         </div>
       </div>
@@ -43,15 +43,15 @@ const Programs = () => {
             <p>Primaria</p>
         </div> */}
 
-        <div className='program-title'>
+        <div className='program-title title_dos'>
           <h2>Primaria</h2>
           <ul className='items-program'>
             <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
             <li><SiGoogleclassroom  className='icon_program'/> Aulas Innovadoras</li>
             <li><PiChairFill  className='icon_program'/>Presencial</li>
-            <li><FaChildReaching className='icon_program' />3 - 5 años</li>
+            <li><FaChildReaching className='icon_program' />1°,2°,3°,4°,5°,6°</li>
           </ul>
-          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program btn_dos'>Mas Informacion</button></div>
         </div>
       </div>
 
@@ -62,15 +62,15 @@ const Programs = () => {
             <p>Secundaria</p>
         </div> */}
 
-        <div className='program-title'>
+        <div className='program-title title_tres'>
           <h2>Secundaria</h2>
           <ul className='items-program'>
             <li><FaMedal className='icon_program'/>Educacion de Calidad</li>
             <li><SiGoogleclassroom  className='icon_program'/> Aulas Innovadoras</li>
             <li><PiChairFill  className='icon_program'/>Presencial</li>
-            <li><FaChildReaching className='icon_program' />3 - 5 años</li>
+            <li><FaChildReaching className='icon_program' />1°,2°,3°,4°,5°</li>
           </ul>
-          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program'>Mas Informacion</button></div>
+          <div className='btn_box'><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /><FaAngleDoubleRight className='icon_program2' /> <button className='btn_program btn_tres'>Mas Informacion</button></div>
         </div>
       </div>
 

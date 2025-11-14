@@ -81,7 +81,7 @@ const Footer = () => {
 </div>
 
 <div className="casilla_footer">
-  <p>Todos Los Derechos Reservados</p>
+  <p>Copyright &copy; - 2025 Arco Iris</p>
 </div>
    
 

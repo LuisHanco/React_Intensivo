@@ -42,12 +42,12 @@ const Contact = () => {
 return (
     <div className='contact'>
       <div className="contact-col">
-        <h3>enviar mensaje <img src={msg_icon} alt="" /></h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias atque dolore enim quod earum obcaecati maiores rem cupiditate? Veniam nam laboriosam illum iure quis aspernatur autem molestias officia, quasi est!</p>
+        <h3>IEP Colegio Arco Iris del Cusco </h3>
+        <p>"En ARCO IRIS, no solo educamos mentes; formamos líderes competentes y con la conciencia social que Cusco necesita para el futuro."</p>
         <ul>
             <li><img src={mail_icon} alt="" /> direcciongeneral@colegioarcoiris.edu.pe</li>
-            <li><img src={phone_icon} alt="" /> 9109977323</li>
-            <li><img src={location_icon} alt="" /> jr ahisstalkjlsdf</li>
+            <li><img src={phone_icon} alt="" /> 940417075 – 084- 615387</li>
+            <li><img src={location_icon} alt="" /> AV. LA CULTURA A-14 PARADERO CAMIONERO</li>
 
         </ul>
       </div>
