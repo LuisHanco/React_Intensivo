@@ -4,4 +4,5 @@ export function Home(){
 
 
 return (<NavBar/>);
+
 }
