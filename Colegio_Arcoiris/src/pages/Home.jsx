@@ -1,8 +1,8 @@
-import {NavBar} from "../components/NavBar";
+import {NavBarr} from "../components/NavBarr";
 
 export function Home(){
 
 
-return (<NavBar/>);
+return (<h1>Home</h1>)
 
 }
