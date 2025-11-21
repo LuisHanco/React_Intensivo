@@ -38,7 +38,7 @@ const Navbar = () => {
         <li><a href=""><IoIosArrowDown /><Link to='programs' smooth={true} offset={-260} duration={500}>Niveles</Link></a></li>
         <li><a href=""><Link to='programs' smooth={true} offset={-260} duration={500}>Matriculas</Link></a></li>
         <li><a href=""><IoIosArrowDown /><Link to='programs' smooth={true} offset={-260} duration={500}>Servicios</Link></a></li>
-        <li><a href=""><Link to='testimonials' smooth={true} offset={-260} duration={500}>Testimoniales</Link></a></li>
+        <li><a href=""><Link to='transparencia' smooth={true} offset={-260} duration={500}>Transparencia</Link></a></li>
         <li><a href=""><Link to='contact' smooth={true} offset={-260} duration={500} className='btn-1'>Contacto</Link></a></li>
       </ul>
       <img src={menu_icon} alt=""  className='menu-icon' onClick={toggleMenu}/>

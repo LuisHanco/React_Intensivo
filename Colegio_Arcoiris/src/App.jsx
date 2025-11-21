@@ -1,16 +1,57 @@
-import { useState } from "react";
 import React from 'react'
-import { MyRoutes } from "./routers/routes";
+import Navbar from './Components/Navbar/Navbar'
+import Hero from './Components/Hero/Hero'
+import Programs from './Components/Programs/Programs'
+import Title from './Components/Title/Title'
+import About from './Components/About/About'
+import Campus from './Components/Campus/Campus'
+import Testimonials from './Components/Testimonials/Testimonials'
+import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
+import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+import { useState } from 'react'
+import Redes from './Components/Redes/Redes'
+import NewsSliderModal from './Components/NewsSliderModal/NewsSliderModal'
+import Transparency from './Components/Transparencia/Transparency'
 
-function App(){
+
+const App = () => {
+
+const [playState, setPlayState] = useState(false);
+const [modalVisible, setModalVisible] = useState(true);
+
+// Función para cerrar el modal de noticias
+  const closeModal = () => {
+    setModalVisible(false);
+    // 💡 Consejo: Aquí podrías usar sessionStorage para que el modal no aparezca 
+    // en la misma sesión de navegador después de cerrarlo una vez.
+  };
 
   return (
-    <>
-    <MyRoutes/>
-    </>
+    <div>
 
+      <NewsSliderModal isVisible={modalVisible} onClose={closeModal} />
+      <Redes/>
+      <Navbar/>
+      <Hero/>
+      <div className="container">
+        <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
+        <Programs/>
+        <About setPlayState={setPlayState}/>
+        <Title subTitle='Galeria' title='Fotos del Colegio' />
+        <Campus/>
 
-  );
+        <Transparency/>
+        
+        {/* <Title subTitle='Testimonios' title='Que dice el Estudiante' />
+        <Testimonials/> */}
+        <Title subTitle='Contactanos' title='Estamos muy cerca de ti' />
+        <Contact/>
+      </div>
+      <Footer/>
+      <VideoPlayer playState={playState} setPlayState={setPlayState}/>
+    </div>
+  )
 }
 
 export default App
