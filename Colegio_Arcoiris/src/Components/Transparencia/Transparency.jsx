@@ -6,10 +6,14 @@ import './Transparency.css';
 // 💡 DATOS DE DOCUMENTOS: Reemplaza estas URLs con los enlaces públicos de tus documentos de Google Drive.
 // Asegúrate de que los enlaces de Drive sean accesibles públicamente para que el iframe pueda cargarlos.
 const documents = [
-  { id: 1, title: 'Reglamento Interno 2024', url: 'https://placehold.co/600x400/212ea0/ffffff?text=Reglamento.pdf', icon: '📝' },
-  { id: 2, title: 'Plan Anual de Trabajo', url: 'https://placehold.co/600x400/212ea0/ffffff?text=Plan+Anual.pdf', icon: '🗓️' },
-  { id: 3, title: 'Estados Financieros (Año 2023)', url: 'https://placehold.co/600x400/212ea0/ffffff?text=EEFF.pdf', icon: '📊' },
-  { id: 4, title: 'Código de Conducta Ética', url: 'https://placehold.co/600x400/212ea0/ffffff?text=Codigo.pdf', icon: '⚖️' },
+  // 1. Reglamento Interno (RI)
+  { id: 1, title: 'Reglamento Interno (RI) 2024', url: 'https://drive.google.com/file/d/1_JNJHBkEidJyP-eKumNG7BE2uF9PGtGD/preview', icon: '📝' },
+  // 2. Plan Anual de Trabajo (PAT)
+  { id: 2, title: 'Plan Anual de Trabajo (PAT)', url: 'https://drive.google.com/file/d/1z2IOAOiaJB3-faNsu7an5LmvQEp7lXo7/preview', icon: '🗓️' },
+  // 3. Proyecto Curricular Institucional (PCI)
+  { id: 3, title: 'Proyecto Curricular Institucional (PCI)', url: 'https://drive.google.com/file/d/1jz-y9e4xr05qppGq05bvpQWzvLSbFsgb/preview', icon: '🧠' },
+  // 4. Proyecto Educativo Institucional (PEI)
+  { id: 4, title: 'Proyecto Educativo Institucional (PEI)', url: 'https://drive.google.com/file/d/1GfmSSZaZmxgxChIJ_sjhRFG6UtHG_gnz/preview', icon: '🚀' },
 ];
 
 const Transparency = () => {
@@ -18,7 +22,6 @@ const Transparency = () => {
 
   const openPdfModal = (url) => {
     // Para que el modal funcione correctamente, debe ser una URL real de PDF.
-    // Aquí estoy usando placeholders, pero en la práctica debe ser un link de Drive.
     setCurrentPdfUrl(url); 
   };
 

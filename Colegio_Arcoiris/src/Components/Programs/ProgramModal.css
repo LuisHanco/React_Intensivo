@@ -1,0 +1,153 @@
+/* ProgramModal.css */
+
+/* --- Overlay del Modal (Fondo oscuro y fijo) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Prioridad alta para que esté encima de todo */
+}
+
+/* --- Contenido del Modal --- */
+.program-modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out; /* Animación de entrada */
+}
+
+/* Animación simple */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: #ff0000;
+}
+
+.modal-title-program {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    text-transform: uppercase;
+}
+
+/* Aplicar color del título según la clase heredada de Programs.jsx */
+.title_uno .modal-title-program { border-color: #d19112; color: #d19112; }
+.title_dos .modal-title-program { border-color: darkcyan; color: darkcyan; }
+.title_tres .modal-title-program { border-color: #694a91; color: #694a91; }
+
+.modal-body-content p, .modal-body-content li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.modal-body-content ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.modal-subtitle-program {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+/* Botón de llamada a la acción (CTA) */
+.btn-call-to-action {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-call-to-action:hover {
+    opacity: 0.9;
+}
+
+/* Aplicar color del botón según la clase heredada de Programs.jsx */
+.btn_uno { background-color: #d19112; }
+.btn_dos { background-color: darkcyan; }
+.btn_tres { background-color: #694a91; }
+
+/* Media Query para hacerlo responsivo en pantallas pequeñas */
+@media (max-width: 650px) {
+    .program-modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+    .modal-title-program {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Añade esto al final de tu archivo ProgramModal.css */
+
+.whatsapp-form-container {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.whatsapp-form-container h3 {
+    text-align: center;
+    color: #4CAF50; /* Un color verde que evoca WhatsApp */
+    margin-bottom: 10px;
+}
+
+.whatsapp-form-container p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.whatsapp-form-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que el padding no desborde */
+    font-size: 1em;
+}
+
+.btn-call-to-action {
+    /* Mantener estilos existentes y asegurar que el botón funciona como submit */
+    width: 100%;
+    /* ... otros estilos ... */
+}

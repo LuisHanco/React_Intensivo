@@ -1,0 +1,131 @@
+/* --- Sección de Matrícula --- */
+.enrollment-section {
+    padding: 80px 0;
+    /*background-color: #ffffff;  Fondo claro */
+}
+
+.enrollment-content {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.enrollment-process, .enrollment-docs {
+    flex: 1;
+}
+
+.enrollment-process h2, .enrollment-docs h2 {
+    color: #212ea0;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #ff7700;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Pasos del Proceso (Grid) */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.step-card {
+    background: #f0f8ff; /* Fondo claro para la tarjeta del paso */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 4rem;
+    color: rgba(33, 46, 160, 0.1); /* Número grande y semitransparente de fondo */
+    font-weight: 700;
+}
+
+.step-card h3 {
+    color: #ff7700;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.step-icon {
+    font-size: 2rem;
+    margin-top: 15px;
+    display: block;
+}
+
+/* Documentos Requeridos (Lista) */
+.doc-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.doc-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.doc-list li:last-child {
+    border-bottom: none;
+}
+
+.doc-icon {
+    color: #212ea0;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.enroll-cta {
+    background: #ff7700;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.enroll-cta:hover {
+    background: #cc5f00;
+}
+
+.enroll-note {
+    margin-top: 15px;
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .enrollment-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .enrollment-process h2, .enrollment-docs h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -13,7 +13,9 @@ import { useState } from 'react'
 import Redes from './Components/Redes/Redes'
 import NewsSliderModal from './Components/NewsSliderModal/NewsSliderModal'
 import Transparency from './Components/Transparencia/Transparency'
-
+import MissionVision from './Components/MisionVision/MissionVision'
+import Services from './Components/Services/Services'
+import Enrollment from './Components/Enrollment/Enrollment'
 
 const App = () => {
 
@@ -37,10 +39,12 @@ const [modalVisible, setModalVisible] = useState(true);
       <div className="container">
         <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
         <Programs/>
+        <Enrollment/>
         <About setPlayState={setPlayState}/>
+        <MissionVision/>
         <Title subTitle='Galeria' title='Fotos del Colegio' />
         <Campus/>
-
+        <Services/>
         <Transparency/>
         
         {/* <Title subTitle='Testimonios' title='Que dice el Estudiante' />

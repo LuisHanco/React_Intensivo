@@ -1,0 +1,52 @@
+/* --- Sección de Servicios --- */
+.services-section {
+    padding: 80px 0;
+    /* background-color: #f0f8ff; Fondo muy suave y claro */
+}
+
+.services-grid {
+    display: grid;
+    /* 3 columnas en escritorio, adaptable a 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-bottom: 5px solid #212ea0; /* Línea de color distintiva */
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem; /* Icono grande */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-card h3 {
+    color: #212ea0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}

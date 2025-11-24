@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './NewsSliderModal.css';
+import img1 from './assets/01-Modal.jpeg';
 
 // Datos de ejemplo para las noticias (¡Reemplaza las rutas de imagen!)
 const newsData = [
@@ -7,19 +8,19 @@ const newsData = [
     id: 1, 
     title: "¡Inscripciones Abiertas!", 
     text: "Aproveche nuestro descuento especial del 15% para matrículas tempranas en todos los niveles. ¡Cupos limitados!", 
-    image: 'assets/hero.jpg' // Usando una imagen genérica del proyecto
+    image: img1 // Usando una imagen genérica del proyecto
   },
   { 
     id: 2, 
     title: "Taller de Robótica", 
     text: "Nuevo taller extracurricular para estudiantes de primaria y secundaria. ¡Inscríbete hoy mismo!", 
-    image: 'assets/Campus-1.jpg' // Usando una imagen genérica del proyecto
+    image: img1 // Usando una imagen genérica del proyecto
   },
   { 
     id: 3, 
     title: "Evento del Día Familiar", 
     text: "Te esperamos este sábado para compartir juegos, comida y actividades con toda la comunidad del colegio.", 
-    image: 'assets/about.jpg' // Usando una imagen genérica del proyecto
+    image: img1 // Usando una imagen genérica del proyecto
   },
 ];
 

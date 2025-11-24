@@ -1,0 +1,181 @@
+/* --- Sección de Misión y Visión --- */
+.mission-vision-section {
+    padding: 80px 0;
+    /* Un fondo sutil para destacar la sección */
+    background: #f7f7f7; 
+}
+
+.mv-content {
+    display: grid;
+    /* 3 columnas en escritorio, adaptable a 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mv-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 5px solid transparent; /* Para el color distintivo */
+    transition: all 0.3s ease;
+}
+
+/* Colores distintivos */
+.mv-card.mission {
+    border-top-color: #212ea0; /* Azul principal */
+}
+
+.mv-card.vision {
+    border-top-color: #4CAF50; /* Verde */
+}
+
+.mv-card.values {
+    border-top-color: #f9b12a; /* Naranja/Amarillo */
+}
+
+.mv-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.mv-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.mv-card h2 {
+    color: #212ea0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mv-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+    display: inline-block; /* Para centrar la lista */
+}
+
+.values-list li {
+    padding: 5px 0;
+    color: #555;
+    font-weight: 500;
+    /* Ícono de check simple con CSS */
+    position: relative;
+    padding-left: 20px; 
+}
+
+.values-list li::before {
+    content: '✓';
+    color: #4CAF50;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .mv-content {
+        grid-template-columns: 1fr; /* Una columna en tabletas y móviles */
+    }
+}
+
+
+.mv-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 💡 NUEVOS ESTILOS PARA LAS LISTAS DESGLOSADAS */
+.mv-summary {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.mission-list,
+.vision-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.mission-list li,
+.vision-list li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+    position: relative;
+    padding-left: 30px; 
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* Iconos de lista personalizados */
+.mission-list li::before {
+    content: '→';
+    color: #212ea0; /* Color de la Misión */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.1em;
+}
+
+.vision-list li::before {
+    content: '⭐';
+    color: #4CAF50; /* Color de la Visión */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1em;
+}
+/* ---------------------------------------------------- */
+
+.mv-card p {
+    color: #666; /* Un color un poco más suave para la descripción corta */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Espacio antes del botón */
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+}
+
+/* Estilo para el nuevo botón "Ver más" */
+.btn-mv-more {
+    display: inline-block; /* Para que tome el tamaño del contenido */
+    background-color: #e0e0e0; /* Un color neutro para el botón */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: auto; /* Empuja el botón hacia abajo si el contenido varía */
+}
+
+.btn-mv-more:hover {
+    background-color: #d0d0d0;
+    color: #000;
+}
+
+/* Asegúrate de que las tarjetas usen flexbox para alinear el botón */
+.mv-card {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    justify-content: space-between; /* Empuja el botón al final */
+}
