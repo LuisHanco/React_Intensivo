@@ -4,7 +4,7 @@
     width: 100%;
     position: absolute;
     transition: all 0.5s;
-
+    z-index: 100000;
 }
 
 .container-redes{
@@ -40,12 +40,30 @@
 }
 
 
+
+
 .tp-dos li{
     margin: 15px 20px;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* 🎯 Aplicación del cursor pointer a todos los enlaces y al contenido dentro del enlace */
+.tp-uno li a,
+.tp-dos li a {
+    cursor: pointer;
+    text-decoration: none; /* Asegura que los enlaces no tengan subrayado */
+    color: inherit; /* Hereda el color del texto blanco */
+}
+
+/* Opcional: Efecto visual al pasar el ratón */
+.tp-uno li a:hover,
+.tp-dos li a:hover {
+    opacity: 0.8; 
+    transition: opacity 0.3s;
 }
 
 

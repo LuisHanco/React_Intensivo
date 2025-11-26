@@ -26,7 +26,7 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
     const { nombre, celular, email } = formData;
     
     // 💡 Tu número de WhatsApp aquí (incluye el código de país, ej: +51987654321)
-    const whatsappNumber = '51987654321'; 
+    const whatsappNumber = '+51944093797'; 
 
     // Mensaje prellenado
     const message = `
@@ -45,7 +45,7 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
     const encodedMessage = encodeURIComponent(message);
     
     // Construir el enlace de WhatsApp
-    const whatsappUrl = `https://wa.me/${910977254}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${+51944093797}?text=${encodedMessage}`;
 
     // Abrir el enlace en una nueva pestaña
     window.open(whatsappUrl, '_blank');
@@ -65,7 +65,7 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
         <h2 className='modal-title-program'>{title}</h2>
         
         <div className="modal-body-content">
-            <p className='modal-grades'>**Grados/Edades:** {grades}</p>
+            <p className='modal-grades'>Grados/Edades: {grades}</p>
             <p className='modal-details'>{details}</p>
         </div>
 
@@ -104,7 +104,7 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
                     type="submit"
                     className={`btn-call-to-action ${buttonClass}`} 
                 >
-                  Enviar Solicitud por WhatsApp
+                  Enviar Solicitud
                 </button>
             </form>
         </div>

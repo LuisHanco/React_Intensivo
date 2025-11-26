@@ -33,11 +33,13 @@ const enrollmentSteps = [
 ];
 
 const requiredDocuments = [
-    "Ficha de matrícula debidamente llenada.",
-    "Partida de nacimiento original y copia.",
+    "Presencia de Padre y/o Apoderado",
+    "Ficha Unica de Matrícula del SIAGE(Solo para Traslados)",
+    "Tarjeta de Vacuna (Nivel Inicial)",
     "Copia del DNI del estudiante y de ambos padres o apoderados.",
-    "Libreta de notas o certificado de estudios del año anterior.",
-    "Constancia de no adeudo del colegio de procedencia.",
+    "Certificado de Estudios.",
+    "Resolucion de traslado.",
+    "Carta de Compromiso debidamente firmara",
 ];
 // Fin de datos existentes
 

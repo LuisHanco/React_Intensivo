@@ -34,13 +34,12 @@ const Footer = () => {
       <p><strong>Horario de Atencion:</strong> Lunes a Viernes de 08:00 am - 02:00 pm</p>
     </div>
     <div className="col_footer dos_footer" >
-      <h3>Enlaces <div className="underline"><span></span></div></h3>
+      <h3>Transparencia <div className="underline"><span></span></div></h3>
       <ul>
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Nosotros</a></li>
-      <li><a href="">Niveles</a></li>
-      <li><a href="">Admision</a></li>
-      <li><a href="">Servicios</a></li>
+      <li><a href="">Reglamento Interno</a></li>
+      <li><a href="">Plan Anual de Trabajo</a></li>
+      <li><a href="">Proyecto Curricular Institucional</a></li>
+      <li><a href="">Proyecto Educativo Institucional</a></li>
       </ul>
      
       
@@ -67,7 +66,7 @@ const Footer = () => {
                   <h3>Siguenos en: <div className="underline"><span></span></div></h3>
                  <ul className='icons_footer'>
                   
-                  <li><a href=""><FaFacebookF/></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=61567199312312"><FaFacebookF/></a></li>
                   <li><a href=""><FaTiktok /></a></li>
                   <li><a href=""> <IoLogoWhatsapp /></a></li>
                   <li><a href=""><MdEmail /></a></li>

@@ -1,6 +1,6 @@
 /* --- Sección de Matrícula --- */
 .enrollment-section {
-    padding: 80px 0;
+    padding: 5px 0;
     /*background-color: #ffffff;  Fondo claro */
 }
 
@@ -127,5 +127,9 @@
 @media (max-width: 600px) {
     .enrollment-process h2, .enrollment-docs h2 {
         font-size: 1.5rem;
+    }
+
+    .dark-btn{
+        margin-top: 50px;
     }
 }

@@ -24,7 +24,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
     
     // ⚠️ IMPORTANTE: REEMPLAZA '51987654321' con tu número de WhatsApp real 
     // (incluye el código de país, pero sin el signo +).
-    const whatsappNumber = '51987654321'; 
+    const whatsappNumber = '51944093797'; 
 
     // Mensaje prellenado para WhatsApp
     const message = `
@@ -45,7 +45,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
     `.trim();
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${+51910977254}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${51944093797}?text=${encodedMessage}`;
 
     // Abrir el enlace en una nueva pestaña
     window.open(whatsappUrl, '_blank');

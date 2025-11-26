@@ -5,6 +5,10 @@ import gallery_1 from '../../assets/gallery-1.jpg';
 import gallery_2 from '../../assets/gallery-2.jpg';
 import gallery_3 from '../../assets/gallery-3.jpg';
 import gallery_4 from '../../assets/gallery-4.jpg';
+import gallery_5 from '../../assets/Galeria/01-img.jpg'
+import gallery_6 from '../../assets/Galeria/02-img.jpg'
+import gallery_7 from '../../assets/Galeria/04-img.jpg'
+import gallery_8 from '../../assets/Galeria/05-img.jpg'
 import white_arrow from '../../assets/white-arrow.png';
 
 // Lista de todas las imágenes disponibles para la galería principal y el modal
@@ -13,10 +17,10 @@ const campusImages = [
     gallery_2,
     gallery_3,
     gallery_4,
-    // Puedes añadir más rutas de imágenes aquí si las tienes en assets
-    '../../assets/img-uno.jpg', // Ejemplo de imagen adicional del rar
-    '../../assets/IMG_2700.jpg', // Ejemplo de otra imagen del rar
-    '../../assets/Plaza_Cusco.jpg' // Ejemplo de otra imagen del rar
+    gallery_5,
+    gallery_6,
+    gallery_7,
+    gallery_8,
 ];
 
 const Campus = () => {

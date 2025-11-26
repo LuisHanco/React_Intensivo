@@ -5,7 +5,6 @@ import Programs from './Components/Programs/Programs'
 import Title from './Components/Title/Title'
 import About from './Components/About/About'
 import Campus from './Components/Campus/Campus'
-import Testimonials from './Components/Testimonials/Testimonials'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
@@ -32,23 +31,20 @@ const [modalVisible, setModalVisible] = useState(true);
   return (
     <div>
 
-      <NewsSliderModal isVisible={modalVisible} onClose={closeModal} />
+      {modalVisible && <NewsSliderModal isVisible={modalVisible} onClose={closeModal} />}
       <Redes/>
       <Navbar/>
       <Hero/>
       <div className="container">
+        <About setPlayState={setPlayState}/>
+        <MissionVision/>
         <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />
         <Programs/>
         <Enrollment/>
-        <About setPlayState={setPlayState}/>
-        <MissionVision/>
         <Title subTitle='Galeria' title='Fotos del Colegio' />
         <Campus/>
         <Services/>
         <Transparency/>
-        
-        {/* <Title subTitle='Testimonios' title='Que dice el Estudiante' />
-        <Testimonials/> */}
         <Title subTitle='Contactanos' title='Estamos muy cerca de ti' />
         <Contact/>
       </div>

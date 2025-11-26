@@ -35,11 +35,7 @@ const Transparency = () => {
 
       <div className="document-list">
         {documents.map((doc) => (
-          <div 
-            key={doc.id} 
-            className="document-card"
-            onClick={() => openPdfModal(doc.url)}
-          >
+          <div key={doc.id} className="document-card" onClick={() => openPdfModal(doc.url)} >
             <span className="doc-icon">{doc.icon}</span>
             <h3 className="doc-title">{doc.title}</h3>
             <span className="doc-action">Ver Documento &rarr;</span>

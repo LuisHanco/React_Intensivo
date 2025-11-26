@@ -14,14 +14,14 @@
 
 /* Contenido Principal del Modal Slider */
 .modal-content-slider {
-    background: #fff;
-    border-radius: 10px;
-    max-width: 700px; /* Ancho máximo en escritorio */
-    width: 90%; /* Responsive: Usa la mayoría del ancho en móviles */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    /* background: #fff; */
+    border-radius: 10px; /* Bordes más suaves */
+    max-width: 700px; 
+    width: 90%; 
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7); 
     position: relative;
     overflow: hidden;
-    display: flex; /* Para controlar el contenido interno */
+    display: block; 
     animation: slideIn 0.5s ease-out;
 }
 
@@ -33,75 +33,99 @@
 
 /* Estructura de la diapositiva */
 .slider-item {
-    display: flex;
+    display: block; 
     width: 100%;
+    position: relative; 
 }
 
-.slider-image {
-    width: 40%; /* Imagen a la izquierda */
+/* 🚨 OCULTAMOS EL TEXTO Y LOS CONTROLES ANTIGUOS */
+.slider-text, .slider-controls, .slide-indicators {
+    display: none !important; 
+}
+
+/* La imagen que ahora ocupa todo el contenedor */
+.slider-image.modal-full-image {
+    width: 100%; 
     height: auto;
+    max-height: 80vh; /* Limita la altura en pantallas muy grandes */
     object-fit: cover;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    display: block;
+    border-radius: 10px; 
+    /* Animación simple de opacidad para el cambio de slide */
+    animation: slideImageFade 1s forwards; 
 }
 
-.slider-text {
-    width: 60%; /* Texto a la derecha */
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+@keyframes slideImageFade {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
 }
 
-.slider-text h2 {
-    color: #212ea0;
-    margin-bottom: 15px;
-}
 
 /* Botón de cierre (X) en la esquina */
 .close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: none;
+    background: rgba(8,0,58,0.7); 
     border: none;
-    font-size: 30px;
-    color: #333;
+    font-size: 50px;
+    color: #fff;
     cursor: pointer;
     z-index: 10;
-}
-
-/* Controles de navegación */
-.slider-controls {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 1;
     display: flex;
-    justify-content: space-between;
-    margin: 15px 0;
-}
-
-.nav-btn {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
     transition: background 0.3s;
 }
 
-.nav-btn:hover {
-    background: #ddd;
+/* --- Controles de Navegación sobre la Imagen --- */
+.slider-controls-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 5; 
 }
 
-/* Indicadores de diapositiva (puntos) */
-.slide-indicators {
-    margin-bottom: 20px;
+/* .nav-btn {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+} */
+
+/* --- Indicadores (Puntos) sobre la Imagen --- */
+.slide-indicators-overlay {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
 }
 
 .indicator {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #ccc;
+    background: rgba(255, 255, 255, 0.7); 
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -109,32 +133,53 @@
 }
 
 .indicator.active {
-    background: #212ea0; /* Color activo */
+    background: rgb(245, 170, 9); 
 }
+
+/* --- Botón de Acción Principal --- */
+.modal-action-btn {
+    position: absolute;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    background: rgb(245, 170, 9); 
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-action-btn:hover {
+    background: #e09b00; 
+}
+
 
 /* --- Responsive: Adaptación a Móviles --- */
 @media (max-width: 768px) {
     .modal-content-slider {
         max-width: 95%;
-        flex-direction: column; /* Apila imagen y texto */
+        border-radius: 5px;
     }
-
-    .slider-item {
-        flex-direction: column;
+    .slider-image.modal-full-image {
+        max-height: 80vh;
+        border-radius: 5px;
     }
-
-    .slider-image {
-        width: 100%; /* La imagen ocupa todo el ancho */
-        height: 150px;
-        border-radius: 10px 10px 0 0; /* Ajusta los bordes */
+    .close-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
     }
-
-    .slider-text {
-        width: 100%;
-        padding: 20px;
+    .nav-btn {
+        font-size: 20px;
+        padding: 8px 12px;
     }
-
-    .slider-controls {
-        flex-direction: row;
+    .modal-action-btn {
+        bottom: 40px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
