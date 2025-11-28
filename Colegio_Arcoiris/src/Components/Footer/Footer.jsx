@@ -27,12 +27,18 @@ const Footer = () => {
 <div className='contenedor_footer'>
     <div className="col_footer uno_footer">
       <img src={icon_logo} alt=""  className='logo_footer'/>
-      <p><strong>Ruc:  </strong> 20109774254</p>
+       <p><strong>Ruc:  </strong> 20109774254</p>
       <p><strong>Direccion: </strong> San Sebastian - Paradero camionero, Cusco, Peru </p>
       <p><strong>Telefono:  </strong> 944 093 797</p>
       <p><strong>Correo: </strong>informes@arcoiris.edu.pe</p>
-      <p><strong>Horario de Atencion:</strong> Lunes a Viernes de 08:00 am - 02:00 pm</p>
+      <p><strong>Horario de Atencion:</strong> Lunes a Viernes de 08:00 am - 04:00 pm</p>
+      
     </div>
+
+    {/* <div className='col_footer'>
+       <h3>Datos <div className="underline"><span></span></div></h3>
+     
+    </div> */}
     <div className="col_footer dos_footer" >
       <h3>Transparencia <div className="underline"><span></span></div></h3>
       <ul>
@@ -72,8 +78,6 @@ const Footer = () => {
                   <li><a href=""><MdEmail /></a></li>
                   
                 </ul>
-
-
         </div>
     </div>
 

@@ -5,7 +5,8 @@ import './ProgramModal.css';
 const ProgramModal = ({ isOpen, onClose, data }) => {
   if (!isOpen || !data) return null;
 
-  const { title, details, grades, colorClass, buttonClass } = data;
+  // 🚨 Desestructuración de los nuevos campos de datos (schedule y historicalPricing)
+  const { title, details, grades, colorClass, buttonClass, schedule, historicalPricing } = data; 
   
   // Nuevo estado para el formulario
   const [formData, setFormData] = useState({
@@ -21,8 +22,8 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
 
   // 2. Función clave: Enviar a WhatsApp
   const handleWhatsappSend = (e) => {
-    e.preventDefault(); // Previene el envío normal del formulario
-
+    e.preventDefault();
+    
     const { nombre, celular, email } = formData;
     
     // 💡 Tu número de WhatsApp aquí (incluye el código de país, ej: +51987654321)
@@ -38,38 +39,68 @@ const ProgramModal = ({ isOpen, onClose, data }) => {
       - Teléfono: ${celular}
       - Email: ${email}
       
-      Por favor, necesito más información sobre el proceso. ¡Gracias!
-    `.trim();
+      Por favor, necesito más detalles sobre el proceso. ¡Gracias!`;
 
-    // Codificar el mensaje para la URL
-    const encodedMessage = encodeURIComponent(message);
-    
-    // Construir el enlace de WhatsApp
-    const whatsappUrl = `https://wa.me/${+51944093797}?text=${encodedMessage}`;
-
-    // Abrir el enlace en una nueva pestaña
-    window.open(whatsappUrl, '_blank');
-    
-    // Opcional: Cerrar el modal después del envío
-    onClose();
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
+  
+  // Evita que un clic en el contenido cierre el modal
+  const handleContentClick = (e) => e.stopPropagation();
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div 
-        className={`program-modal-content ${colorClass}`} 
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button className="modal-close-btn" onClick={onClose}>&times;</button>
+      <div className="program-modal-content" onClick={handleContentClick}>
+        <button onClick={onClose} className="modal-close-btn" aria-label="Cerrar">&times;</button>
         
-        <h2 className='modal-title-program'>{title}</h2>
-        
-        <div className="modal-body-content">
-            <p className='modal-grades'>Grados/Edades: {grades}</p>
-            <p className='modal-details'>{details}</p>
-        </div>
+        <h2 className={`modal-title-program ${colorClass}`}>{title}</h2>
+        <p className="modal-program-details">{details}</p>
+        <p className="modal-program-grades">Grados: <strong>{grades}</strong></p>
 
-        {/* --- Formulario de Contacto --- */}
+        {/* --- 1. SECCIÓN DE HORARIOS --- */}
+        {schedule && schedule.length > 0 && (
+            <div className="program-schedule">
+                <h3>Horarios y Modalidades</h3>
+                <ul>
+                    {schedule.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+            </div>
+        )}
+        
+        {/* --- 2. CUADRO HISTÓRICO DE PRECIOS DISCRETO (con <details>) --- */}
+        {historicalPricing && historicalPricing.length > 0 && (
+            <details className="historical-pricing-details">
+                <summary className="pricing-summary">
+                    Histórico de Pensiones y Matriculas (Últimos Años)
+                </summary>
+                <div className="pricing-table-container">
+                    <table className="pricing-history-table">
+                        <thead>
+                            <tr>
+                                <th>Año</th>
+                                <th>Matrícula (S/)</th>
+                                <th>Mensualidad (S/)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* Resaltamos el año actual */}
+                            {historicalPricing.map((item) => (
+                                <tr key={item.year} className={item.year === new Date().getFullYear() ? 'current-year-row' : ''}>
+                                    <td>{item.year}</td>
+                                    <td>{item.matricula}</td>
+                                    <td>{item.mensualidad}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <p className="pricing-note">* Precios referenciales sujetos a cambios. Consulta por el precio actual en el formulario de abajo.</p>
+                </div>
+            </details>
+        )}
+
+        {/* --- SECCIÓN DEL FORMULARIO DE CONTACTO --- */}
         <div className="whatsapp-form-container">
             <h3>¡Contáctanos para Inscribirte!</h3>
             <p>Llena este formulario y te enviaremos la solicitud por WhatsApp para una respuesta inmediata.</p>

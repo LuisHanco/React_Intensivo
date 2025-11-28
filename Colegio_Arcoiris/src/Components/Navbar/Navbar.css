@@ -29,18 +29,42 @@ nav ul li{
     transition: all .5s;
 }
 
-nav ul li a{
+nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
     width: 100px;
     height: 50px;
     text-align: center;
-    transition: all .5s;
-    
+    color: white; /* Aseguramos que el texto sea blanco */
+    position: relative; /* Clave para posicionar la línea */
+    overflow: hidden; /* Clave para que la línea no se vea fuera del enlace */
+    transition: color 0.3s ease; /* Transición suave para el color del texto si cambia */
+}
+/* 🚨 NUEVO EFECTO DE LÍNEA INFERIOR EXPANDIBLE */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Inicia en el centro */
+    transform: translateX(-50%); /* Ajusta al centro exacto */
+    width: 0; /* Empieza con ancho cero */
+    height: 2px; /* Grosor de la línea */
+    background-color: #fff; /* Color de acento de tu proyecto */
+    transition: width 0.3s ease-out; /* Transición suave solo para el ancho */
 }
 
+/* Estado de HOVER */
+nav ul li a:hover {
+    color: #fff; /* Cambia el color del texto al hacer hover */
+    /* REMOVEMOS: border-bottom: solid 1px white; */
+    /* La línea del hover ahora la maneja el ::after */
+}
+
+/* Expansión de la línea al HOVER */
+nav ul li a:hover::after {
+    width: 70%; /* Se expande al 70% del ancho del enlace */
+}
 
 .dark-nav{
     /* background: #212ea0; */
@@ -54,23 +78,34 @@ nav ul li a{
     transition: all .5s;
 }
 
-.menu-icon{
+/* .menu-icon{
     display: none;
     transition: all .5s;
+} */
+
+.menu-icon-container {
+    display: none; /* Oculto por defecto en escritorio */
+    cursor: pointer;
+    z-index: 20; 
 }
 
 .btn-1{
-  background: #fff;
+ background: #fff;
   color: #212121;
-  /* padding: 14px 25px; */
-  /* font-size: 16px; */
+  padding: 8px 15px; /* Ajustamos el padding para el botón */
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   border: 0;
   outline: 0;
-  /* display: inline-block;
-  align-items: center;
-  justify-content: center; */
+  transition: all 0.3s ease; /* Transición suave para el botón */
+}
+
+.btn-1:hover {
+    background: #f0f0f0;
+    color: #212121;
+    transform: translateY(-2px); /* Pequeño efecto 3D */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* ------- media query ------- */
@@ -132,11 +167,16 @@ nav ul li a{
     width: 120px;
   }
 
-    .menu-icon{
+    /* .menu-icon{
         display: block;
         width: 30px;
         cursor: pointer;
         padding-top: 15px;
+    } */
+     
+     .menu-icon-container{
+        display: block; 
+        color: white; /* Asegura que el icono sea visible */
     }
 
     .hide-mobile-menu{

@@ -15,7 +15,7 @@
     justify-content: center;
     padding: 20px; 
     /* Transición clave para el efecto de slider suave */
-    transition: background-image 1.5s ease-in-out; 
+    transition: all 1.5s ease-in-out; 
 }
 
 /* --- CONTENEDOR DE TEXTO Y FORMULARIO (Flexbox mejorado) --- */
@@ -33,6 +33,7 @@
 /* Se activa cada vez que el texto cambia */
 .slide-fade {
     animation: fadeIn 0.8s ease-out;
+    
 }
 
 @keyframes fadeIn {
@@ -83,6 +84,8 @@
     text-align: justify;
     font-size: 20px;
     margin-bottom: 30px;
+    border-left: solid 5px rgb(245, 170, 9);
+    padding-left: 15px;
 }
 
 .hero-text .btn{
@@ -207,6 +210,7 @@
         text-align: center;
         max-width: 90%;
         margin-bottom: 40px; /* Espacio entre el texto y el formulario */
+    
     }
 
     .hero-text .btn{
@@ -225,6 +229,10 @@
     .pre-matricula-form{
         left: 0;
     }
+    .hero-text p {
+        border: none;
+    }
+    
 }
 
 @media (max-width: 650px){
@@ -241,4 +249,5 @@
         text-align: center;
         margin: 15px auto 30px;
     }
+    
 }

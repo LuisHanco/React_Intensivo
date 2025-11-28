@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'; // 🚨 Importamos useEffect
 import './NewsSliderModal.css';
-import img1 from './assets/01-Modal.png';
+import img1 from './assets/01-Modal.jpg';
 import img2 from './assets/02-Modal.png';
 import img3 from './assets/03-Modal.png';
+import img4 from './assets/04-Modal.png';
 
 // Datos de ejemplo para las noticias (¡Reemplaza las rutas de imagen!)
 const newsData = [
@@ -24,6 +25,12 @@ const newsData = [
     text: "Te esperamos este sábado para compartir juegos, comida y actividades con toda la comunidad del colegio.", 
     image: img3 // Reemplaza por la importación de tu imagen 3
   },
+  {
+    id:4,
+    title:"banner cuatro",
+    text:"Hola",
+    image:img4
+  }
 ];
 
 // Solo usamos 'onClose' como prop, tal como lo recibe de App.jsx
@@ -107,12 +114,12 @@ const NewsSliderModal = ({ isVisible, onClose }) => {
             </div>
 
             {/* Botón de acción/navegación - Usa la función handleActionClick */}
-            <button 
+            {/* <button 
                 onClick={handleActionClick} 
                 className="modal-action-btn"
             >
                 Más Detalles / Ir a Matrícula
-            </button>
+            </button> */}
 
             {/* Ocultamos el div de texto (será invisible con el nuevo CSS) */}
              <div className="slider-text">

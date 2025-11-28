@@ -34,11 +34,10 @@ const enrollmentSteps = [
 
 const requiredDocuments = [
     "Presencia de Padre y/o Apoderado",
-    "Ficha Unica de Matrícula del SIAGE(Solo para Traslados)",
+    "Ficha Unica de Matrícula del SIAGE (Solo para Traslados)",
     "Tarjeta de Vacuna (Nivel Inicial)",
     "Copia del DNI del estudiante y de ambos padres o apoderados.",
-    "Certificado de Estudios.",
-    "Resolucion de traslado.",
+    "Certificado de Estudios. (Solo para Traslados)",
     "Carta de Compromiso debidamente firmara",
 ];
 // Fin de datos existentes

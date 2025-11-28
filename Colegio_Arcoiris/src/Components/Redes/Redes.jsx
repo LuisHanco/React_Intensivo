@@ -47,7 +47,7 @@ const Redes = () => {
       </ul>
       <ul className='tp-dos'>
         {/* Horario - No es un enlace */}
-        <li><FaRegClock /> <span>Lunes - Viernes: 8:00 am - 5:00 pm</span></li>
+        <li><FaRegClock /> <span>Lunes - Viernes: 8:00 am - 4:00 pm</span></li>
 
         {/* ENLACES INTERNOS (APLICANDO EL MENSAJE DE "EN CONSTRUCCIÓN") */}
         <li>
