@@ -1,0 +1,185 @@
+nav{
+    width: 100%;
+    /* background: #333; */
+    color: white;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+
+
+.logo{
+    width: 300px;
+    transition: all .5s;
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 7px;
+    font-size: 16px;
+    transition: all .5s;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: white; /* Aseguramos que el texto sea blanco */
+    position: relative; /* Clave para posicionar la línea */
+    overflow: hidden; /* Clave para que la línea no se vea fuera del enlace */
+    transition: color 0.3s ease; /* Transición suave para el color del texto si cambia */
+}
+/* 🚨 NUEVO EFECTO DE LÍNEA INFERIOR EXPANDIBLE */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Inicia en el centro */
+    transform: translateX(-50%); /* Ajusta al centro exacto */
+    width: 0; /* Empieza con ancho cero */
+    height: 2px; /* Grosor de la línea */
+    background-color: #fff; /* Color de acento de tu proyecto */
+    transition: width 0.3s ease-out; /* Transición suave solo para el ancho */
+}
+
+/* Estado de HOVER */
+nav ul li a:hover {
+    color: #fff; /* Cambia el color del texto al hacer hover */
+    /* REMOVEMOS: border-bottom: solid 1px white; */
+    /* La línea del hover ahora la maneja el ::after */
+}
+
+/* Expansión de la línea al HOVER */
+nav ul li a:hover::after {
+    width: 70%; /* Se expande al 70% del ancho del enlace */
+}
+
+.dark-nav{
+    /* background: #212ea0; */
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7));
+    transition: all .5s;
+    height: 100px;
+}
+
+.dark-nav .collegue{
+    width: 150px;
+    transition: all .5s;
+}
+
+/* .menu-icon{
+    display: none;
+    transition: all .5s;
+} */
+
+.menu-icon-container {
+    display: none; /* Oculto por defecto en escritorio */
+    cursor: pointer;
+    z-index: 20; 
+}
+
+.btn-1{
+ background: #fff;
+  color: #212121;
+  padding: 8px 15px; /* Ajustamos el padding para el botón */
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  transition: all 0.3s ease; /* Transición suave para el botón */
+}
+
+.btn-1:hover {
+    background: #f0f0f0;
+    color: #212121;
+    transform: translateY(-2px); /* Pequeño efecto 3D */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ------- media query ------- */
+
+
+@media (max-width: 1000px){
+    .logo{
+        width: 100px;
+        padding-top: 15px;
+        /* margin-left: -200px; */
+    }
+    nav ul li{
+        margin: 10px 15px;
+    }
+}
+
+@media (max-width: 840px){
+    nav{
+        padding: 15px 0;
+        margin-top: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7));
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        padding-top: 70px;
+        transition: 0.5s;
+        margin-top: 50px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 40px 40px;
+        text-align: center;
+    }
+
+    nav ul li a{
+        text-align: center;
+        margin: auto;
+    }
+
+  
+
+    nav.container.dark-nav{
+        margin-top: 0;
+    }
+
+     nav.container.dark-nav ul {
+    transform: translateY(-50px);
+  }
+
+    .dark-nav .collegue{
+    margin-left: 0px;
+    width: 120px;
+  }
+
+    /* .menu-icon{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        padding-top: 15px;
+    } */
+     
+     .menu-icon-container{
+        display: block; 
+        color: white; /* Asegura que el icono sea visible */
+    }
+
+    .hide-mobile-menu{
+        right: -100%;
+    }
+}

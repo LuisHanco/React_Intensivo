@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Outfit:wght@100..900&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
+/* --- SLIDER Y CONTENEDOR PRINCIPAL --- */
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    /* La imagen de fondo es ahora dinámica y se aplica con un estilo inline en Hero.jsx */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px; 
+    /* Transición clave para el efecto de slider suave */
+    transition: all 1.5s ease-in-out; 
+}
+
+/* --- CONTENEDOR DE TEXTO Y FORMULARIO (Flexbox mejorado) --- */
+.hero-content-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho en pantallas grandes */
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio entre los dos elementos */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el texto y el formulario se apilen */
+    gap: 50px; /* Espacio entre el texto y el formulario */
+}
+
+/* --- ANIMACIÓN DEL TEXTO (Fade al cambiar el slide) --- */
+/* Se activa cada vez que el texto cambia */
+.slide-fade {
+    animation: fadeIn 0.8s ease-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- TEXTO CENTRAL --- */
+.hero-text{
+    flex: 1; /* Permite que el texto crezca */
+    min-width: 300px;
+    max-width: 500px; /* Limita el ancho del texto para legibilidad */
+    text-align: left; /* Alineación a la izquierda por defecto */
+    padding: 15px;
+}
+
+.hero-text h1{
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.hero-text-uno{
+    font-family: "Stack Sans Notch", sans-serif;
+    padding: 10px 0;
+    font-size: 50px;
+    display: block; /* Asegura que ocupe su propia línea */
+}
+
+.hero-text-dos{
+    font-family: "Stack Sans Notch", sans-serif;
+    color: rgb(245, 170, 9);
+    position: static; /* Eliminamos el posicionamiento absoluto que causaba problemas */
+    left: auto;
+    top: auto;
+    display: block; /* Asegura que ocupe su propia línea */
+}
+
+.hero-text p{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border-left: solid 5px rgb(245, 170, 9);
+    padding-left: 15px;
+}
+
+.hero-text .btn{
+    background-color: rgb(245, 170, 9);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 16px;
+    /* Ajustes del botón para que esté alineado con el texto */
+    width: fit-content;
+}
+
+.hero-text .btn .btn_2{
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.hero-text .btn .btn_1{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.redes_uno{
+    width: 700px;
+    
+}
+
+
+
+
+
+
+
+/* --- PARA EL FORMULARIO --- */
+.pre-matricula-form {
+    flex-shrink: 0; /* Evita que el formulario se comprima */
+    background: rgba(8,0,58,0.9); /* Fondo más sólido para el formulario */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+    /* Eliminamos el position: relative y top: -105px; */
+    position: relative;
+    left: 200px;
+}
+
+.pre-matricula-form h2 {
+    color: #fff; 
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Stack Sans Notch", sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+.input_01{
+    margin-top: 20px;
+}
+
+.form-btn {
+    background: rgb(245, 170, 9);
+
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.form-btn:hover {
+    background: rgb(245, 170, 9);
+}
+
+
+.btn_2{
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* ------- media query ------- */
+
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column; /* Apila el texto y el formulario verticalmente */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 40px; /* Espacio entre el texto y el formulario */
+    
+    }
+
+    .hero-text .btn{
+        margin: 50px auto 0 auto; /* Centra el botón en vista vertical */
+    }
+
+    .pre-matricula-form {
+        max-width: 90%; 
+        /* Aseguramos que el formulario se centre y ocupe el espacio */
+    }
+
+    .hero-text-dos{
+        text-align: center;
+    }
+
+    .pre-matricula-form{
+        left: 0;
+    }
+    .hero-text p {
+        border: none;
+    }
+    
+}
+
+@media (max-width: 650px){
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .hero-text h1{
+        font-size: 30px;
+    }
+    .hero-text p{
+        font-size: 16px;
+        text-align: center;
+        margin: 15px auto 30px;
+    }
+    
+}
