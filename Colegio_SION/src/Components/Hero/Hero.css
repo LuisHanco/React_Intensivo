@@ -276,6 +276,50 @@
     animation-delay: 4s;
 }
 
+
+
+/* 3. Posicionamiento Único y Variaciones de Animación */
+
+/* Icono 1: Esquina Superior Izquierda */
+.icon-5 {
+    top: 70%;
+    left:85%;
+    width: 70px; 
+    animation-duration: 7s; /* Más lento */
+    animation-delay: 0.5s; /* Empieza un poco después */
+}
+
+/* Icono 2: Esquina Inferior Derecha */
+.icon-6 {
+    bottom: 80%;
+    right: 65%;
+    width: 70px;  /* Más pequeño */
+    animation-duration: 5s; /* Más rápido */
+    animation-delay: 2s;
+}
+
+/* Icono 3: Centro Derecha */
+.icon-7 {
+    top: 70%;
+    right: 75%;
+   width: 70px; 
+    animation-duration: 8s; /* Muy lento */
+    animation-delay: 4s;
+}
+
+.icon-8{
+    top: 80%;
+    right: 90%;
+    width: 70px; 
+    animation-duration: 8s; /* Muy lento */
+    animation-delay: 4s;
+}
+
+
+
+
+
+
 /* --- Media Query (Recomendado) --- */
 /* Oculta los iconos flotantes en dispositivos móviles para no saturar */
 @media (max-width: 900px) {

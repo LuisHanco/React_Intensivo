@@ -160,6 +160,10 @@ Quedo atento a su respuesta. Gracias.`;
           <img src={icon_02} alt="Icono Lápiz" className="floating-icon icon-2" />
           <img src={icon_03} alt="Icono Globo" className="floating-icon icon-3" />
           <img src={icon_04} alt="Icono Sciense" className="floating-icon icon-4" />
+          <img src={icon_01} alt="Icono Libro" className="floating-icon icon-5" />
+          <img src={icon_02} alt="Icono Lápiz" className="floating-icon icon-6" />
+          <img src={icon_03} alt="Icono Globo" className="floating-icon icon-7" />
+          <img src={icon_04} alt="Icono Sciense" className="floating-icon icon-8" />
           {/* Opcional: Agrega más aquí con la clase base y una clase única (icon-4, icon-5, etc.) */}
       </div>
       {/* 🚨 FIN DE ÍCONOS FLOTANTES */}

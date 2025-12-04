@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Momo+Signature&family=Outfit:wght@100..900&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
+.banner-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.banner-uno{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.banner-dos{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 24, 72, 0.9), rgba(0, 24, 72, 0.9));
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    
+}
+
+.banner-dos::after{
+    position: absolute;
+    content: '';
+    background: linear-gradient(rgba(0, 24, 72, 5), rgba(0, 24, 72, 0.5));
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+      transition: all .3s;
+}
+
+.banner-dos:hover::after{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.banner-dos p{
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caja-p{
+    text-align: right;
+    border-right: 10px solid #fff;
+    padding: 10px;
+}
+
+
+
+.banner-p1{
+    font-size: 60px;
+}
+
+.banner-p2{
+    font-size: 70px;
+}
+
+
+
+
+
+
+.caja-ban{
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+
+.caja-ban::before {
+    content: ""; /* CLAVE 2: Es obligatorio definir content */
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(rgba(0, 24, 72, 0.9), rgba(0, 24, 72, 0.9));
+    opacity: 0; /* INICIAL: El overlay es invisible */
+    
+    /* CLAVE 3: La transición debe ir en el estado normal */
+    transition: opacity 0.5s ease; 
+    
+    z-index: 1; /* Asegura que esté encima del fondo, pero debajo del texto */
+}
+
+.caja-ban:hover::before{ 
+   /* Al hacer hover en la caja, el :before (el overlay) se vuelve semi-transparente */
+    opacity: 0.5;
+}
+
+.ban-uno{
+    background: url(../../assets/Galeria/Banner/01-img.webp);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.ban-dos{
+    background: url(../../assets/Galeria/Banner/02-img.webp);
+     background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.ban-tres{
+    background: url(../../assets/Galeria/Banner/03-img.webp);
+     background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.ban-cuatro{
+    background: url(../../assets/Galeria/Banner/04-img.webp);
+     background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (max-width: 1024px) {
+    .banner-container{
+        display: none;
+    }
+}

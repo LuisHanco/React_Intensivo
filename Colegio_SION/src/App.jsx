@@ -15,6 +15,7 @@ import Transparency from './Components/Transparencia/Transparency'
 import MissionVision from './Components/MisionVision/MissionVision'
 import Services from './Components/Services/Services'
 import Enrollment from './Components/Enrollment/Enrollment'
+import Banner from './Components/Banner/Banner'
 
 const App = () => {
 
@@ -35,7 +36,9 @@ const [modalVisible, setModalVisible] = useState(true);
       <Redes/>
       <Navbar/>
       <Hero/>
+      <Banner/>
       <div className="container">
+        
         <About setPlayState={setPlayState}/>
         <MissionVision/>
         <Title subTitle='' title='NUESTROS PROGRAMAS EDUCATIVOS' />

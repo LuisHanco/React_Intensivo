@@ -38,10 +38,7 @@ const Campus = () => {
 
             <div className="gallery">
                 {visibleImages.map((imgSrc, index) => (
-                    <img 
-                        key={index} 
-                        src={imgSrc} 
-                        alt={`Campus Foto ${index + 1}`} 
+                    <img  key={index}  src={imgSrc}   alt={`Campus Foto ${index + 1}`} 
                         // Fallback en caso de que la imagen no cargue
                         onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/200x150/ff7700/ffffff?text=Foto+Campus'; }}
                     />
