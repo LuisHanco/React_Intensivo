@@ -1,0 +1,169 @@
+.programs{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+.program{
+    flex-basis: 31%;
+    position: relative;
+    /* background-color: white; */
+    /* height: 100vh; */
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.program img{
+    width: 100%;
+    
+    /* 🚨 ESTILO BLOB IRREGULAR (Forma Orgánica) */
+    /* El primer conjunto de 4 valores (60% 40% 70% 30%) define las esquinas horizontales. */
+    /* El segundo conjunto de 4 valores (30% 60% 40% 70%) define las esquinas verticales. */
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%; 
+    
+    height: 400px; /* Altura Fija para que el blob sea uniforme en todas las tarjetas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+    transition: border-radius 0.5s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Opcional: Agrega un efecto de hover sutil para la imagen */
+.program:hover img {
+    /* Cambia ligeramente la forma al pasar el mouse para un efecto de "vida" */
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%; 
+    transform: scale(1.02);
+}
+
+.program .icon_program{
+    margin-right: 10px;
+}
+
+
+
+.program-title{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin: 30px 0;
+    color: darkcyan;
+}
+
+
+
+.title_uno{
+    color:#d19112 ;
+}
+
+
+.title_dos{
+    
+}
+
+.title_tres{
+    color: #694a91;
+}
+
+.btn_uno{
+    background-color: #d19112;
+}
+
+.btn_dos{
+    background-color: darkcyan;
+}
+
+.btn_tres{
+    background-color: #694a91;
+}
+
+
+.items-program{
+    margin: 20px;
+}
+
+
+.program-title ul li{
+    list-style: none;
+    text-align: left;
+    margin: 10px;
+}
+
+
+.program-title button{
+    width: 35%;
+    height: 35px;
+    border-radius: 50px;
+    /* margin-top: 10px; */
+    border: none;
+    /* background-color: darkcyan; */
+    color: white;
+}
+
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: all .4s;
+}
+
+.caption img{
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.program:hover .caption{
+    opacity: 1;
+    padding-top: 0;
+}
+
+.btn_program{
+    
+    margin: auto;
+    cursor: pointer;
+
+}
+
+.btn_box{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_program2{
+    font-size: 30px;
+    position: relative;
+    left: 80px;
+}
+/* ------- media query ------- */
+
+
+@media (max-width: 850px){
+    .programs{
+        flex-direction: column;
+    }
+
+    .program{
+        flex-basis: 100%;
+        margin: 20px;
+    }
+}

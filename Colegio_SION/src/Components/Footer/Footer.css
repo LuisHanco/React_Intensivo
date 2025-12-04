@@ -1,0 +1,255 @@
+
+
+/* Todo el Footer */
+
+.wape-footer {
+    
+    width: 99.9%;
+    height: 100%;
+    /* background:linear-gradient(rgba(0, 24, 72, 0.7), rgba(0, 24, 72, 0.7)), url('../../assets/Plaza_Cusco.jpg'); */
+    background:linear-gradient(rgba(0, 24, 72, 1), rgba(0, 24, 72,1 ));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+}
+
+
+/* CURVAS DEL FOOTER  */
+.wape-footer svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 87px;
+}
+
+.wape-footer .shape-fill {
+    fill: #f5f5f5;
+}
+/* FIN DE CURVAS DEL FOOTER */
+
+
+
+
+/* Inicio del contenido del footer */
+
+.contenedor_footer{
+    /* background-color: blue; */
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* todas las columnas */
+.col_footer{
+    flex-basis: 25%;
+    padding: 10px;
+    /* background-color: red; */
+}
+
+.col_footer h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    position: relative;
+    color: #fff;
+}
+
+.col_footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.col_footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* fin de todas las columnas */
+
+/* columna uno */
+.uno_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.uno_footer p{
+    width: 80%;
+    text-align: justify;
+    margin: 5px;
+}
+
+.logo_footer{
+    width: 250px;
+    margin: 0px auto 30px auto;
+}
+/* fin de columna uno */
+
+
+
+
+/* formulario de la columana 4  */
+
+
+
+.col_footer form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.col_footer form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+
+.col_footer form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* .col_footer form button .fas{
+    font-size: 16px;
+
+} */
+
+
+/* fin de la columa formulario */
+
+
+
+.cuatro_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: orange; */
+    color: black;
+}
+
+.cuatro_footer .social-icons{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 16px;
+}
+
+.cuatro_footer .social-icons .icons_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuatro_footer .social-icons .icons_footer li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+
+}
+
+.cuatro_footer .social-icons .icons_footer li a{
+    color: black;
+    width: 25px;
+    padding: 3px;
+}
+
+
+
+.underline{
+    width: 100%;
+    height: 3px;
+    background-color: #f8f8f888;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+
+.underline span{
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* final del footer */
+.casilla_footer{
+    margin: 10px auto;
+    padding: 15px;
+    width: 85%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px #fff;
+}
+
+
+
+
+
+/* ------- media query ------- */
+
+
+@media (max-width: 700px){
+
+    .wape-footer{
+        height: 100%;
+    }
+    
+    .col_footer{
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

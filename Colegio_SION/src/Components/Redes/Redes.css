@@ -1,0 +1,86 @@
+.redes{
+    background: linear-gradient(rgba(0, 24, 72, 0.7), rgba(0, 24, 72, 0.7));
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    z-index: 100000;
+}
+
+.container-redes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tp-uno{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+.tp-uno li{
+    margin: 15px 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tp-dos li span{
+    margin-left: 10px;
+}
+
+.tp-dos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+
+
+
+.tp-dos li{
+    margin: 15px 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 🎯 Aplicación del cursor pointer a todos los enlaces y al contenido dentro del enlace */
+.tp-uno li a,
+.tp-dos li a {
+    cursor: pointer;
+    text-decoration: none; /* Asegura que los enlaces no tengan subrayado */
+    color: inherit; /* Hereda el color del texto blanco */
+}
+
+/* Opcional: Efecto visual al pasar el ratón */
+.tp-uno li a:hover,
+.tp-dos li a:hover {
+    opacity: 0.8; 
+    transition: opacity 0.3s;
+}
+
+
+/* ------- media query ------- */
+
+
+
+@media (max-width: 840px){
+
+
+    .tp-uno{
+        /* background-color: #fff; */
+        margin: auto;
+        
+    }
+
+    .tp-dos{
+        display: none;
+    }
+}

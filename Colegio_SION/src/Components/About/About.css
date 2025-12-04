@@ -1,0 +1,128 @@
+.about{
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.about-left{
+    flex-basis: 40%;
+    position: relative;
+}
+
+.about-right{
+    flex-basis: 56%;
+}
+
+.about-img{
+    
+     width: 100%;
+    
+    /* 🚨 ESTILO BLOB IRREGULAR (Forma Orgánica) */
+    /* El primer conjunto de 4 valores (60% 40% 70% 30%) define las esquinas horizontales. */
+    /* El segundo conjunto de 4 valores (30% 60% 40% 70%) define las esquinas verticales. */
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%; 
+    
+    height: 650px; /* Altura Fija para que el blob sea uniforme en todas las tarjetas */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+    transition: border-radius 0.5s ease, transform 0.3s ease; /* Transición suave */
+}
+
+
+
+
+/* Animación para el efecto de "pulsación" */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); 
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 0 25px rgba(255, 255, 255, 0); 
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        opacity: 1;
+    }
+}
+
+
+.play-icon-pulse {
+    /* Aplicar la animación: nombre, duración, función de tiempo, repetición */
+    animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+
+.play-icon{
+    /* Mantener estilos de posición */
+    width: 50px; /* Ya no es una imagen con ancho fijo */
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 5; /* Asegurar que esté encima de la imagen */
+    
+    /* Aplicar animación */
+    animation: pulse 1.5s infinite;
+}
+
+/* Opcional: Estilo al pasar el mouse */
+.play-icon:hover {
+    animation-play-state: paused; /* Detener la animación al pasar el ratón */
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+
+.about h3{
+    font-weight: 600;
+    font-weight: 16px;
+    color: #212ea0;
+    text-transform: uppercase;
+}
+
+.about h2{
+    font-size: 35px;
+    color: #000f38;
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+.about p{
+    color: #676767;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ------- media query ------- */
+
+
+
+@media (max-width: 800px){
+    .about{
+        flex-direction: column;
+    }
+    .about-left{
+        flex-basis: 100%;
+        margin: 20px;
+        order: 2;
+    }
+
+    .about-right{
+        flex-basis: 100%;
+    }
+
+    .about-img{
+        height: 500px;
+         border-radius: 50% 40% 70% 30% / 30% 60% 40% 50%; 
+    }
+}

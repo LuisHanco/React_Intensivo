@@ -1,0 +1,234 @@
+/* --- Sección de Misión y Visión --- */
+.mission-vision-section {
+    padding: 0px 0;
+    /* Un fondo sutil para destacar la sección */
+    /* background: #f7f7f7;  */
+}
+
+.mv-content {
+    display: grid;
+    /* 3 columnas en escritorio, adaptable a 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+
+.mission .flip-card-front{
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7)), url('../../assets/Galeria/Mision/01-img.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.vision .flip-card-front{
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7)), url('../../assets/Galeria/Mision/02-img.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.values .flip-card-front{
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,.7)), url('../../assets/Galeria/Mision/03-img.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+/* ---------------------------------------------------------------- */
+/* --- ESTILOS PARA EL EFECTO FLIP CARD (MV-CARD) --- */
+/* ---------------------------------------------------------------- */
+
+.mv-card {
+    /* CLAVE: Establece la perspectiva en el contenedor padre */
+    perspective: 1000px;
+    
+    background: transparent; /* Fondo transparente para el giro */
+    padding: 0; /* Quitar padding del padre */
+    border-radius: 10px;
+    box-shadow: none; /* La sombra irá en el inner */
+    height: 350px; /* Altura fija para que el giro se vea bien */
+    border-top: none;
+    /* Elimina o sobrescribe los estilos originales no necesarios */
+    transition: none; 
+}
+
+/* El elemento que contendrá ambas caras y rotará */
+.flip-card-inner {
+    position: relative;
+    width: 80%;
+    height: 110%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Rotación al pasar el mouse */
+.mv-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara de atrás */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+    padding: 30px;
+    box-sizing: border-box; 
+    
+    /* Para centrar el contenido y manejar el espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para la Cara Frontal: ÍCONO + TÍTULO */
+.flip-card-front {
+    transform: rotateY(0deg);
+}
+
+/* Estilo para la Cara Trasera: DESCRIPCIÓN + BOTÓN */
+.flip-card-back {
+    transform: rotateY(180deg); /* La cara trasera comienza girada */
+    background-color: #f7f7f7; /* Fondo sutil para el reverso */
+}
+
+/* ---------------------------------------------------------------- */
+/* --- COLORES DISTINTIVOS (Aplicados a ambas caras) --- */
+/* ---------------------------------------------------------------- */
+
+/* Colores distintivos de borde */
+ /*.mission .flip-card-front, .mission .flip-card-back {
+    border-top: 5px solid #212ea0; Azul principal 
+}*/
+
+/*.vision .flip-card-front, .vision .flip-card-back {
+    border-top: 5px solid #4CAF50;  Verde 
+}*/
+
+/*.values .flip-card-front, .values .flip-card-back {
+    border-top: 5px solid #f9b12a;  Naranja/Amarillo 
+}*/
+
+/* ---------------------------------------------------------------- */
+/* --- AJUSTES DE CONTENIDO --- */
+/* ---------------------------------------------------------------- */
+
+/* Ícono */
+.mv-icon {
+    font-size: 3.5em; /* Tamaño del icono */
+    margin-bottom: 20px;
+    color: #212ea0; /* Color base, las clases de color podrían redefinirlo */
+}
+
+/* Título */
+.mv-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/* Ajustes del contenido para el reverso */
+.flip-card-back h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.flip-card-back p {
+    color: #666; 
+    line-height: 1.5;
+    margin-bottom: 25px; /* Espacio antes del botón */
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+    overflow-y: auto; /* Para texto largo */
+    padding: 0 5px;
+    font-size: 0.95em;
+}
+
+/* Estilo para el botón "Ver más detalle" */
+.btn-mv-more {
+    display: inline-block; 
+    background-color: #212ea0; /* Color principal */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: auto; /* Empuja el botón al final del contenido trasero */
+}
+
+.btn-mv-more:hover {
+    background-color: #1a2480;
+    transform: scale(1.05);
+}
+
+/* ---------------------------------------------------- */
+/* --- Estilos para el listado COMPLETO dentro del MODAL (Si aplica) --- */
+/* ---------------------------------------------------- */
+.mv-full-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.mv-full-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+/* Estilos de viñetas para las listas completas (Misión) */
+.mission-list li::before {
+    content: '→';
+    color: #212ea0; 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.1em;
+}
+
+/* Estilos de viñetas para las listas completas (Visión) */
+.vision-list li::before {
+    content: '⭐';
+    color: #4CAF50; 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1em;
+}
+
+/* Estilos de viñetas para las listas completas (Valores) */
+.values-list li::before {
+    content: '✨';
+    color: #f9b12a; 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1em;
+}
+
+
+/* --- Media Query para Responsividad --- */
+@media (max-width: 900px) {
+    /* La estructura grid se encarga de apilar o mantener columnas */
+    .mv-card {
+        height: 300px; /* Reducir altura en móvil si es necesario */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+    }
+
+    
+}

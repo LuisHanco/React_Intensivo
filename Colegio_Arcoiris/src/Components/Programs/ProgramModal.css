@@ -1,0 +1,256 @@
+/* ProgramModal.css */
+
+/* --- Overlay del Modal (Fondo oscuro y fijo) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Prioridad alta para que esté encima de todo */
+}
+
+/* --- Contenido del Modal --- */
+.program-modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out; /* Animación de entrada */
+}
+
+/* Animación simple */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #555;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #d19112;
+}
+
+.modal-title-program {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Colores de Título (Heredados de Programs.css) */
+.title_uno { color:#d19112 ; }
+.title_dos { color: darkcyan; }
+.title_tres { color: #694a91; }
+
+.modal-program-details {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.modal-program-grades {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* --- Estilos para la Sección de Horarios --- */
+.program-schedule {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.program-schedule h3 {
+    font-size: 1.1em;
+    color: #212ea0; /* Color corporativo */
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.program-schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.program-schedule ul li {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.program-schedule ul li::before {
+    content: "•";
+    color: #d19112; /* Color de acento */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+/* --- Estilos para el Histórico de Precios (DISCRETO) --- */
+.historical-pricing-details {
+    margin-top: 15px;
+    font-size: 0.85em; /* Fuente pequeña para discreción */
+    color: #888;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #fafafa; /* Fondo muy claro */
+    cursor: pointer;
+}
+
+.pricing-summary {
+    list-style: none; 
+    font-weight: 600;
+    color: #212ea0; 
+    padding: 5px 0;
+}
+
+/* Estilo del indicador de colapsable */
+.pricing-summary::before {
+    content: '▼';
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s;
+    font-size: 0.8em;
+    color: #d19112;
+}
+
+.historical-pricing-details[open] .pricing-summary::before {
+    transform: rotate(180deg);
+}
+
+/* Ocultar el marcador de lista por defecto en navegadores */
+.pricing-summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.pricing-table-container {
+    padding: 10px 0 5px;
+}
+
+.pricing-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: left;
+}
+
+.pricing-history-table th, .pricing-history-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-history-table th {
+    background-color: #eaf1fa; /* Fondo muy claro para headers */
+    color: #555;
+    font-weight: 600;
+}
+
+.current-year-row {
+    font-weight: bold;
+    background-color: #fff8e1; /* Resalta el año actual */
+    color: #333;
+}
+
+.pricing-note {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.75em;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+/* --- Estilos del formulario --- */
+.whatsapp-form-container {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.whatsapp-form-container h3 {
+    text-align: center;
+    color: #25D366; /* Un color verde que evoca WhatsApp */
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.whatsapp-form-container p {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.whatsapp-form-container form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que el padding no desborde */
+}
+
+.btn-call-to-action {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-call-to-action:hover {
+    opacity: 0.9;
+}
+
+/* Aplicar color del botón según la clase heredada de Programs.jsx */
+.btn_uno { background-color: #d19112; }
+.btn_dos { background-color: darkcyan; }
+.btn_tres { background-color: #694a91; }
+
+/* Media Query para hacerlo responsivo en pantallas pequeñas */
+@media (max-width: 650px) {
+    .program-modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+    .modal-title-program {
+        font-size: 1.5em;
+    }
+    .btn-call-to-action {
+        font-size: 1em;
+        height: 40px;
+    }
+    .historical-pricing-details {
+        font-size: 0.75em;
+    }
+}
