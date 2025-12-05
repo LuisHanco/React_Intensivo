@@ -40,7 +40,7 @@ const Navbar = () => {
     <nav className= {`container ${sticky? 'dark-nav' : ''}`}>
       <img src={logo} alt="" className='logo collegue'/>
       <ul className={mobileMenu? '':'hide-mobile-menu'}>
-        <li><a href=""><Link to='hero' smooth={true} offset={0} duration={500} onClick={toggleMenu}>Incio</Link></a></li>
+        <li><a href=""><Link to='hero' smooth={true} offset={0} duration={500} onClick={toggleMenu}>Inicio</Link></a></li>
         <li><a href=""><Link to='about' smooth={true} offset={-150} duration={500} onClick={toggleMenu}>Nosotros</Link></a></li>
         <li><a href=""><Link to='programs' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>Niveles</Link></a></li>
         <li><a href=""><Link to='enrollment' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>Matriculas</Link></a></li>

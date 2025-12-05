@@ -98,15 +98,23 @@
 
 /* --- Mejoras para Libro de Reclamaciones --- */
 .reclamos-item a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     color: #fff !important; /* Color llamativo para destacar */
+    transition: all .3s;
 }
 
 .reclamos-icon {
     font-size: 1.1em;
 }
+
+
+.reclamos-item a:hover{
+    color: #07a3ec  !important;
+}
+
+
 
 /* FIN DE COLUMNA TRES */
 
@@ -190,6 +198,7 @@
     border-radius: 50%;
     background-color: #fff;
     margin: 0 5px;
+    transition: all .3s;
 
 }
 
@@ -197,6 +206,17 @@
     color: black;
     width: 25px;
     padding: 3px;
+    transition: all .3s;
+}
+
+
+
+.cuatro_footer .social-icons .icons_footer li:hover{
+    background-color: #07a3ec;
+}
+
+.cuatro_footer .social-icons .icons_footer li:hover a{
+    color:#fff; ;
 }
 
 /* FIN DE COLUMNA CUATRO */

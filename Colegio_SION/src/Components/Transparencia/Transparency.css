@@ -30,8 +30,14 @@
 }
 
 .doc-icon {
-    font-size: 48px;
+    
+    color: #fff;
     margin-bottom: 15px;
+}
+
+.document-card .doc-icon{
+    color: #0495f5;
+    font-size: 40px;
 }
 
 .doc-title {
@@ -41,7 +47,7 @@
 }
 
 .doc-action {
-    color: #4CAF50;
+    color: #0495f5;
     font-weight: 500;
     margin-top: 10px;
 }

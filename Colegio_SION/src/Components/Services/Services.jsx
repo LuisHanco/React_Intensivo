@@ -1,14 +1,17 @@
 import React from 'react';
 import Title from '../Title/Title';
 import './Services.css';
-
+import { FaBook } from "react-icons/fa6";
+import { GiBrain } from "react-icons/gi";
+import { BsBandaidFill } from "react-icons/bs";
 // Datos de los servicios ofrecidos
 const servicesData = [
     {
         id: 1,
         title: "Tutoría y Refuerzo Académico",
         description: "Sesiones personalizadas y grupales para fortalecer el aprendizaje en áreas clave como matemáticas, ciencias y comunicación, asegurando el éxito escolar.",
-        icon: "📘"
+        icon: <FaBook />,
+
     },
     // {
     //     id: 2,
@@ -26,13 +29,16 @@ const servicesData = [
         id: 4,
         title: "Orientación Psicológica",
         description: "Soporte emocional y académico para estudiantes y familias, ayudando en la gestión de emociones, habilidades sociales y toma de decisiones.",
-        icon: "🧠"
+        icon:  <GiBrain />,
+
     },
     {
         id: 5,
         title: "Enfermería",
         description: "Contamos con servicio de enfermería permanente para los estudiantes para asi brindar tranquilidad a los padres y atención inmediata.",
-        icon: "🩹"
+        icon: <BsBandaidFill />
+
+
     },
     // {
     //     id: 6,

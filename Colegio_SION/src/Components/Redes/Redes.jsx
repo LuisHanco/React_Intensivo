@@ -21,7 +21,7 @@ const Redes = () => {
   // Enlaces reales (DEBES REEMPLAZAR CON TUS VALORES)
   const socialLinks = {
     facebook: 'https://www.facebook.com/sionsansebastian',
-    tiktok: 'https://www.tiktok.com/@TuUsuarioTikTok',
+    tiktok: 'https://www.tiktok.com/@colegiosioncusco',
     whatsapp: 'https://wa.me/51932661357',
     email: 'mailto:tu.correo@ejemplo.com',
   };

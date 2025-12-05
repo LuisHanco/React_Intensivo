@@ -18,7 +18,7 @@
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border-bottom: 5px solid #212ea0; /* Línea de color distintiva */
+    border-bottom: 5px solid #0092e0; /* Línea de color distintiva */
 }
 
 .service-card:hover {
@@ -27,7 +27,9 @@
 }
 
 .service-icon {
-    font-size: 3rem; /* Icono grande */
+    font-size: 4rem; /* Icono grande */
+    text-align: center;
+    color: #0092e0;
     margin-bottom: 15px;
     display: block;
 }

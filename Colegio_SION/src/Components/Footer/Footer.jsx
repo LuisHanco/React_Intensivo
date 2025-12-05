@@ -56,7 +56,7 @@ const Footer = () => {
               <strong>Teléfono: </strong> 9932661357
             </p>
             <p>
-              <strong>Correo: </strong>informes@arcoiris.edu.pe
+              <strong>Correo: </strong>informes@sion.edu.pe
             </p>
             <p>
               <strong>Horario de Atención:</strong> Lunes a Viernes de 08:00 am - 04:00 pm
@@ -110,8 +110,9 @@ const Footer = () => {
               {/* Nuevo elemento: Libro de Reclamaciones */}
               
             </ul>
+            
             <div className='reclamos-item'>
-                <a href="URL_DE_TU_LIBRO_DE_RECLAMACIONES" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwrJgjvP5sLdOHbT6vVQ1ZNFqFLbW9-f9aWSkzAkUJ8Rbmvw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
                   <IoBook className='reclamos-icon' /> Libro de Reclamaciones
                 </a>
               </div>
@@ -133,22 +134,22 @@ const Footer = () => {
               </h3>
               <ul className="icons_footer">
                 <li>
-                  <a href="https://www.facebook.com/profile.php?id=61567199312312" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/sionsansebastian" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF />
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.tiktok.com/@colegiosioncusco" target="_blank" rel="noopener noreferrer">
                     <FaTiktok />
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://api.whatsapp.com/send?phone=51932661357" target="_blank" rel="noopener noreferrer">
                     <IoLogoWhatsapp />
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:informes@arcoiris.edu.pe">
+                  <a href="mailto:informes@sion.edu.pe">
                     <MdEmail />
                   </a>
                 </li>
